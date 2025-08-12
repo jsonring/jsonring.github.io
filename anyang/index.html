@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>安阳三天两晚旅游攻略 | 探索殷商文化与太行风光</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#8B4513', // 殷商青铜色调
+                        secondary: '#CD853F', // 辅助棕色
+                        accent: '#D2691E', // 强调色
+                        light: '#F5F5DC', // 浅色背景
+                        dark: '#2F4F4F', // 深色文字
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans SC', 'sans-serif'],
+                        serif: ['Noto Serif SC', 'serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-shadow {
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            }
+            .text-shadow-sm {
+                text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+            }
+            .bg-blur {
+                backdrop-filter: blur(8px);
+            }
+            .scrollbar-hide::-webkit-scrollbar {
+                display: none;
+            }
+            .scrollbar-hide {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Serif+SC:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-light text-dark font-sans">
+    <!-- 导航栏 -->
+    <header id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-transparent">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fa fa-map-marker text-accent text-2xl"></i>
+                <h1 class="text-xl md:text-2xl font-serif font-bold text-white text-shadow">安阳旅游攻略</h1>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#overview" class="text-white hover:text-accent transition-colors text-shadow-sm">概览</a>
+                <a href="#itinerary" class="text-white hover:text-accent transition-colors text-shadow-sm">行程安排</a>
+                <a href="#food" class="text-white hover:text-accent transition-colors text-shadow-sm">美食推荐</a>
+                <a href="#accommodation" class="text-white hover:text-accent transition-colors text-shadow-sm">住宿建议</a>
+                <a href="#tips" class="text-white hover:text-accent transition-colors text-shadow-sm">注意事项</a>
+            </div>
+            <button id="menu-toggle" class="md:hidden text-white text-2xl">
+                <i class="fa fa-bars"></i>
+            </button>
+        </nav>
+        <!-- 移动端菜单 -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white/90 bg-blur absolute w-full">
+            <div class="container mx-auto px-4 py-2 flex flex-col space-y-3">
+                <a href="#overview" class="py-2 hover:text-accent transition-colors">概览</a>
+                <a href="#itinerary" class="py-2 hover:text-accent transition-colors">行程安排</a>
+                <a href="#food" class="py-2 hover:text-accent transition-colors">美食推荐</a>
+                <a href="#accommodation" class="py-2 hover:text-accent transition-colors">住宿建议</a>
+                <a href="#tips" class="py-2 hover:text-accent transition-colors">注意事项</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 英雄区域 -->
+    <section class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://picsum.photos/id/1036/1920/1080" alt="安阳殷墟遗址景观" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-dark/50"></div>
+        </div>
+        <div class="container mx-auto px-4 z-10 text-center">
+            <h1 class="text-[clamp(2.5rem,6vw,4rem)] font-serif font-bold text-white mb-6 text-shadow animate-fade-in">
+                安阳三天两晚旅游攻略
+            </h1>
+            <p class="text-[clamp(1rem,3vw,1.5rem)] text-white max-w-3xl mx-auto mb-10 text-shadow-sm">
+                探索殷商文化发源地，领略太行山脉壮美风光
+            </p>
+            <a href="#overview" class="inline-block bg-accent hover:bg-accent/90 text-white font-medium py-3 px-8 rounded-full transition-all transform hover:scale-105 shadow-lg">
+                开始探索 <i class="fa fa-arrow-down ml-2"></i>
+            </a>
+        </div>
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
+            <i class="fa fa-angle-double-down text-3xl"></i>
+        </div>
+    </section>
+
+    <!-- 概览部分 -->
+    <section id="overview" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.8rem,4vw,2.5rem)] font-serif font-bold text-primary mb-4">安阳旅游概览</h2>
+                <div class="w-24 h-1 bg-accent mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <p class="text-lg mb-6">
+                        安阳是一座历史文化悠久、自然风光秀丽的城市，8月前往安阳旅游，既能感受古老的殷商文化，又能欣赏太行山脉的壮美景色。
+                    </p>
+                    <p class="text-lg mb-6">
+                        这座城市拥有殷墟、中国文字博物馆等重要文化遗址，同时毗邻林州太行大峡谷，让游客在历史与自然之间自由穿梭。
+                    </p>
+                    <div class="flex flex-wrap gap-4 mt-8">
+                        <div class="flex items-center bg-light p-3 rounded-lg">
+                            <i class="fa fa-calendar text-accent mr-3 text-xl"></i>
+                            <span>建议游玩：3天2晚</span>
+                        </div>
+                        <div class="flex items-center bg-light p-3 rounded-lg">
+                            <i class="fa fa-map-marker text-accent mr-3 text-xl"></i>
+                            <span>地点：河南省安阳市</span>
+                        </div>
+                        <div class="flex items-center bg-light p-3 rounded-lg">
+                            <i class="fa fa-thermometer-full text-accent mr-3 text-xl"></i>
+                            <span>8月气温：炎热</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative rounded-xl overflow-hidden shadow-xl transform transition-transform hover:scale-[1.02]">
+                    <img src="https://picsum.photos/id/1039/800/600" alt="安阳城市风光" class="w-full h-auto">
+                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-dark/80 to-transparent p-6">
+                        <p class="text-white font-medium">殷墟遗址 - 商后期都城遗址</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 行程安排 -->
+    <section id="itinerary" class="py-20 bg-light">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.8rem,4vw,2.5rem)] font-serif font-bold text-primary mb-4">行程安排</h2>
+                <div class="w-24 h-1 bg-accent mx-auto mb-6"></div>
+                <p class="max-w-3xl mx-auto text-lg">精心设计的三天两晚行程，带您全方位体验安阳的历史文化与自然风光</p>
+            </div>
+
+            <!-- 行程标签页 -->
+            <div class="mb-8">
+                <div class="flex flex-wrap justify-center gap-2 md:gap-4">
+                    <button class="itinerary-tab active px-6 py-3 bg-primary text-white rounded-full font-medium transition-all" data-day="day1">
+                        第一天
+                    </button>
+                    <button class="itinerary-tab px-6 py-3 bg-gray-200 hover:bg-gray-300 rounded-full font-medium transition-all" data-day="day2">
+                        第二天
+                    </button>
+                    <button class="itinerary-tab px-6 py-3 bg-gray-200 hover:bg-gray-300 rounded-full font-medium transition-all" data-day="day3">
+                        第三天
+                    </button>
+                </div>
+            </div>
+
+            <!-- 第一天行程 -->
+            <div class="itinerary-content active" id="day1">
+                <div class="bg-white rounded-2xl shadow-lg p-6 md:p-10 mb-8">
+                    <h3 class="text-2xl md:text-3xl font-serif font-bold text-primary mb-6 flex items-center">
+                        <span class="bg-primary text-white rounded-full w-10 h-10 flex items-center justify-center mr-4">1</span>
+                        殷商文化探寻之旅
+                    </h3>
+                    
+                    <div class="space-y-10">
+                        <!-- 上午 -->
+                        <div class="itinerary-item">
+                            <div class="flex flex-col md:flex-row gap-6">
+                                <div class="md:w-1/3">
+                                    <div class="rounded-xl overflow-hidden h-64 md:h-full shadow-md">
+                                        <img src="https://picsum.photos/id/1053/600/400" alt="殷墟遗址" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                                    </div>
+                                </div>
+                                <div class="md:w-2/3">
+                                    <div class="flex items-center mb-4">
+                                        <span class="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm font-medium mr-3">上午</span>
+                                        <span class="text-gray-500"><i class="fa fa-clock-o mr-1"></i> 建议游玩：3小时</span>
+                                    </div>
+                                    <h4 class="text-xl font-bold mb-3">殷墟遗址</h4>
+                                    <p class="mb-4">
+                                        这里是商后期都城遗址，可参观殷墟博物馆，欣赏司母戊鼎复制品、甲骨文窖穴等，还可游览车马坑展厅和妇好墓，感受商朝的历史文化底蕴。
+                                    </p>
+                                    <div class="flex flex-wrap gap-2 mt-2">
+                                        <span class="bg-light px-3 py-1 rounded-full text-sm">历史遗迹</span>
+                                        <span class="bg-light px-3 py-1 rounded-full text-sm">文化遗产</span>
+                                        <span class="bg-light px-3 py-1 rounded-full text-sm">博物馆</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- 下午 -->
+                        <div class="itinerary-item">
+                            <div class="flex flex-col md:flex-row gap-6">
+                                <div class="md:w-1/3">
+                                    <div class="rounded-xl overflow-hidden h-64 md:h-full shadow-md">
+                                        <img src="https://picsum.photos/id/1071/600/400" alt="中国文字博物馆" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                                    </div>
+                                </div>
+                                <div class="md:w-2/3">
+                                    <div class="flex items-center mb-4">
+                                        <span class="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm font-medium mr-3">下午</span>
+                                        <span class="text-gray-500"><i class="fa fa-clock-o mr-1"></i> 建议游玩：5.5小时</span>
+                                    </div>
+                                    <h4 class="text-xl font-bold mb-3">中国文字博物馆 + 文峰塔</h4>
+                                    <p class="mb-4">
+                                        在中国文字博物馆，通过丰富的展品和现代化的展示手段，了解中国文字从甲骨文到现代汉字的演变过程，还可参与甲骨文拓印等互动体验（约2.5小时）。
+                                    </p>
+                                    <p class="mb-4">
+                                        之后前往文峰塔，登顶俯瞰老城风光，欣赏这座斜而不倒的千年古塔的独特魅力（约1小时）。
+                                    </p>
+                                    <div class="flex flex-wrap gap-2 mt-2">
+                                        <span class="bg-light px-3 py-1 rounded-full text-sm">博物馆</span>
+                                        <span class="bg-light px-3 py-1 rounded-full text-sm">历史建筑</span>
+                                        <span class="bg-light px-3 py-1 rounded-full text-sm">文化体验</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- 晚上 -->
+                        <div class="itinerary-item">
+                            <div class="flex flex-col md:flex-row gap-6">
+                                <div class="md:w-1/3">
+                                    <div class="rounded-xl overflow-hidden h-64 md:h-full shadow-md">
+                                        <img src="https://picsum.photos/id/1060/600/400" alt="仓巷街夜景" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                                    </div>
+                                </div>
+                                <div class="md:w-2/3">
+                                    <div class="flex items-center mb-4">
+                                        <span class="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm font-medium mr-3">晚上</span>
+                                        <span class="text-gray-500"><i class="fa fa-clock-o mr-1"></i> 建议游玩：3小时</span>
+                                    </div>
+                                    <h4 class="text-xl font-bold mb-3">仓巷街 + 北大街夜市</h4>
+                                    <p class="mb-4">
+                                        漫步仓巷街，欣赏明清建筑在灯光映照下的美景，逛逛"彰德府"文创店。随后前往北大街小吃夜市，品尝炒凉粉、粉浆饭等安阳特色小吃。
+                                    </p>
+                                    <div class="flex flex-wrap gap-2 mt-2">
+                                        <span class="bg-light px-3 py-1 rounded-full text-sm">夜景</span>
+                                        <span class="bg-light px-3 py-1 rounded-full text-sm">美食</span>
+                                        <span class="bg-light px-3 py-1 rounded-full text-sm">购物</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 第二天行程 -->
+            <div class="itinerary-content hidden" id="day2">
+                <div class="bg-white rounded-2xl shadow-lg p-6 md:p-10 mb-8">
+                    <h3 class="text-2xl md:text-3xl font-serif font-bold text-primary mb-6 flex items-center">
+                        <span class="bg-primary text-white rounded-full w-10 h-10 flex items-center justify-center mr-4">2</span>
+                        山水风光与红色文化之旅
+                    </h3>
+                    
+                    <div class="space-y-10">
+                        <!-- 上午 -->
+                        <div class="itinerary-item">
+                            <div class="flex flex-col md:flex-row gap-6">
+                                <div class="md:w-1/3">
+                                    <div class="rounded-xl overflow-hidden h-64 md:h-full shadow-md">
+                                        <img src="https://picsum.photos/id/1018/600/400" alt="太行大峡谷" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                                    </div>
+                                </div>
+                                <div class="md:w-2/3">
+                                    <div class="flex items-center mb-4">
+                                        <span class="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm font-medium mr-3">上午</span>
+                                        <span class="text-gray-500"><i class="fa fa-clock-o mr-1"></i> 建议游玩：4小时（车程1.5小时）</span>
+                                    </div>
+                                    <h4 class="text-xl font-bold mb-3">林州太行大峡谷 - 王相岩景区</h4>
+                                    <p class="mb-4">
+                                        包车前往林州太行大峡谷，车程约1.5小时。抵达后游览王相岩景区，挑战摩天筒梯，欣赏瀑布群，感受太行山脉的雄伟险峻。
+                                    </p>
+                                    <div class="flex flex-wrap gap-2 mt-2">
+                                        <span class="bg-light px-3 py-1 rounded-full text-sm">自然风光</span>
+                                        <span class="bg-light px-3 py-1 rounded-full text-sm">登山</span>
+                                        <span class="bg-light px-3 py-1 rounded-full text-sm">瀑布</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- 下午 -->
+                        <div class="itinerary-item">
+                            <div class="flex flex-col md:flex-row gap-6">
+                                <div class="md:w-1/3">
+                                    <div class="rounded-xl overflow-hidden h-64 md:h-full shadow-md">
+                                        <img src="https://picsum.photos/id/1025/600/400" alt="红旗渠青年洞" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                                    </div>
+                                </div>
+                                <div class="md:w-2/3">
+                                    <div class="flex items-center mb-4">
+                                        <span class="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm font-medium mr-3">下午</span>
+                                        <span class="text-gray-500"><i class="fa fa-clock-o mr-1"></i> 建议游玩：4小时</span>
+                                    </div>
+                                    <h4 class="text-xl font-bold mb-3">石板岩镇 + 红旗渠青年洞</h4>
+                                    <p class="mb-4">
+                                        在石板岩镇享用农家乐午餐，品尝太行山野菜、小米焖饭等特色美食。之后前往红旗渠青年洞，沿着"红飘带"栈道前行，体验VR修渠，感受当年修建红旗渠的艰辛与伟大（约3小时）。
+                                    </p>
+                                    <div class="flex flex-wrap gap-2 mt-2">
+                                        <span class="bg-light px-3 py-1 rounded-full text-sm">红色旅游</span>
+                                        <span class="bg-light px-3 py-1 rounded-full text-sm">历史工程</span>
+                                        <span class="bg-light px-3 py-1 rounded-full text-sm">农家乐</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- 晚上 -->
+                        <div class="itinerary-item">
+                            <div class="flex flex-col md:flex-row gap-6">
+                                <div class="md:w-1/3">
+                                    <div class="rounded-xl overflow-hidden h-64 md:h-full shadow-md">
+                                        <img src="https://picsum.photos/id/1076/600/400" alt="安阳大剧院" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                                    </div>
+                                </div>
+                                <div class="md:w-2/3">
+                                    <div class="flex items-center mb-4">
+                                        <span class="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm font-medium mr-3">晚上</span>
+                                    </div>
+                                    <h4 class="text-xl font-bold mb-3">返回市区 + 可选文化体验</h4>
+                                    <p class="mb-4">
+                                        返回市区，若时间允许，可前往安阳大剧院观看殷商主题演出《甲骨文》，进一步感受安阳的历史文化魅力。
+                                    </p>
+                                    <div class="flex flex-wrap gap-2 mt-2">
+                                        <span class="bg-light px-3 py-1 rounded-full text-sm">文化演出</span>
+                                        <span class="bg-light px-3 py-1 rounded-full text-sm">历史体验</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 第三天行程 -->
+            <div class="itinerary-content hidden" id="day3">
+                <div class="bg-white rounded-2xl shadow-lg p-6 md:p-10 mb-8">
+                    <h3 class="text-2xl md:text-3xl font-serif font-bold text-primary mb-6 flex items-center">
+                        <span class="bg-primary text-white rounded-full w-10 h-10 flex items-center justify-center mr-4">3</span>
+                        周易文化与休闲之旅
+                    </h3>
+                    
+                    <div class="mb-8 p-4 bg-light rounded-lg">
+                        <p class="text-center font-medium">第三天提供两条路线选择，您可以根据兴趣选择适合自己的行程</p>
+                    </div>
+                    
+                    <!-- 路线A -->
+                    <div class="mb-12 border-l-4 border-primary pl-6 py-2">
+                        <h4 class="text-xl font-bold mb-6">A线：周易文化深度游</h4>
+                        
+                        <div class="space-y-10">
+                            <!-- 上午 -->
+                            <div class="itinerary-item">
+                                <div class="flex flex-col md:flex-row gap-6">
+                                    <div class="md:w-1/3">
+                                        <div class="rounded-xl overflow-hidden h-64 md:h-full shadow-md">
+                                            <img src="https://picsum.photos/id/1061/600/400" alt="羑里城" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                                        </div>
+                                    </div>
+                                    <div class="md:w-2/3">
+                                        <div class="flex items-center mb-4">
+                                            <span class="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm font-medium mr-3">上午</span>
+                                            <span class="text-gray-500"><i class="fa fa-clock-o mr-1"></i> 建议游玩：2.5小时</span>
+                                        </div>
+                                        <h4 class="text-xl font-bold mb-3">羑里城</h4>
+                                        <p class="mb-4">
+                                            这里是文王拘而演《周易》之地，可在八卦迷宫中穿梭挑战，参观周易碑林，感受古人的智慧和哲学思想。
+                                        </p>
+                                        <div class="flex flex-wrap gap-2 mt-2">
+                                            <span class="bg-light px-3 py-1 rounded-full text-sm">历史遗迹</span>
+                                            <span class="bg-light px-3 py-1 rounded-full text-sm">文化体验</span>
+                                            <span class="bg-light px-3 py-1 rounded-full text-sm">哲学思想</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- 下午 -->
+                            <div class="itinerary-item">
+                                <div class="flex flex-col md:flex-row gap-6">
+                                    <div class="md:w-1/3">
+                                        <div class="rounded-xl overflow-hidden h-64 md:h-full shadow-md">
+                                            <img src="https://picsum.photos/id/1074/600/400" alt="岳飞庙" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                                        </div>
+                                    </div>
+                                    <div class="md:w-2/3">
+                                        <div class="flex items-center mb-4">
+                                            <span class="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm font-medium mr-3">下午</span>
+                                            <span class="text-gray-500"><i class="fa fa-clock-o mr-1"></i> 建议游玩：2小时</span>
+                                        </div>
+                                        <h4 class="text-xl font-bold mb-3">岳飞庙 + 特色午餐</h4>
+                                        <p class="mb-4">
+                                            前往岳飞庙，缅怀民族英雄岳飞，欣赏庙内的古柏和碑刻，了解岳飞精忠报国的一生。午餐可在附近品尝正宗的道口烧鸡。
+                                        </p>
+                                        <div class="flex flex-wrap gap-2 mt-2">
+                                            <span class="bg-light px-3 py-1 rounded-full text-sm">历史名人</span>
+                                            <span class="bg-light px-3 py-1 rounded-full text-sm">文化遗产</span>
+                                            <span class="bg-light px-3 py-1 rounded-full text-sm">特色美食</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 路线B -->
+                    <div class="border-l-4 border-accent pl-6 py-2">
+                        <h4 class="text-xl font-bold mb-6">B线：休闲放松游</h4>
+                        
+                        <div class="space-y-10">
+                            <!-- 上午 -->
+                            <div class="itinerary-item">
+                                <div class="flex flex-col md:flex-row gap-6">
+                                    <div class="md:w-1/3">
+                                        <div class="rounded-xl overflow-hidden h-64 md:h-full shadow-md">
+                                            <img src="https://picsum.photos/id/1063/600/400" alt="洹水公园" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                                        </div>
+                                    </div>
+                                    <div class="md:w-2/3">
+                                        <div class="flex items-center mb-4">
+                                            <span class="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm font-medium mr-3">上午</span>
+                                            <span class="text-gray-500"><i class="fa fa-clock-o mr-1"></i> 建议游玩：4小时</span>
+                                        </div>
+                                        <h4 class="text-xl font-bold mb-3">洹水公园 + 安阳博物馆</h4>
+                                        <p class="mb-4">
+                                            上午前往洹水公园，在这座商朝遗址上的城市绿肺中漫步，享受休闲时光（约2小时）。随后参观安阳博物馆，观赏众多商周时代的青铜器和清代的瓷器珍品（约2小时）。
+                                        </p>
+                                        <div class="flex flex-wrap gap-2 mt-2">
+                                            <span class="bg-light px-3 py-1 rounded-full text-sm">公园</span>
+                                            <span class="bg-light px-3 py-1 rounded-full text-sm">博物馆</span>
+                                            <span class="bg-light px-3 py-1 rounded-full text-sm">休闲</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- 下午 -->
+                            <div class="itinerary-item">
+                                <div class="flex flex-col md:flex-row gap-6">
+                                    <div class="md:w-1/3">
+                                        <div class="rounded-xl overflow-hidden h-64 md:h-full shadow-md">
+                                            <img src="https://picsum.photos/id/1058/600/400" alt="汤阴梦幻谷" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                                        </div>
+                                    </div>
+                                    <div class="md:w-2/3">
+                                        <div class="flex items-center mb-4">
+                                            <span class="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm font-medium mr-3">下午</span>
+                                        </div>
+                                        <h4 class="text-xl font-bold mb-3">汤阴梦幻谷（可选）</h4>
+                                        <p class="mb-4">
+                                            下午若有带娃需求，可前往汤阴梦幻谷，体验各种游乐设施，享受欢乐时光。
+                                        </p>
+                                        <div class="flex flex-wrap gap-2 mt-2">
+                                            <span class="bg-light px-3 py-1 rounded-full text-sm">亲子游</span>
+                                            <span class="bg-light px-3 py-1 rounded-full text-sm">娱乐设施</span>
+                                            <span class="bg-light px-3 py-1 rounded-full text-sm">休闲娱乐</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 美食推荐 -->
+    <section id="food" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.8rem,4vw,2.5rem)] font-serif font-bold text-primary mb-4">美食推荐</h2>
+                <div class="w-24 h-1 bg-accent mx-auto mb-6"></div>
+                <p class="max-w-3xl mx-auto text-lg">品味安阳特色美食，感受地道的豫北风味</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- 扁粉菜 -->
+                <div class="bg-light rounded-xl overflow-hidden shadow-lg transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://picsum.photos/id/1080/600/400" alt="安阳扁粉菜" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">扁粉菜</h3>
+                        <p class="text-gray-600 mb-4">
+                            安阳特色早餐，以羊骨汤为底，搭配粉条、豆腐等，味道浓郁。
+                        </p>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <i class="fa fa-map-marker text-accent mr-2"></i>
+                            <span>推荐：申记扁粉菜等非遗老店</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 道口烧鸡 -->
+                <div class="bg-light rounded-xl overflow-hidden shadow-lg transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://picsum.photos/id/1083/600/400" alt="道口烧鸡" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">道口烧鸡</h3>
+                        <p class="text-gray-600 mb-4">
+                            皮酥肉烂，香味四溢，是安阳的经典美食，历史悠久。
+                        </p>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <i class="fa fa-map-marker text-accent mr-2"></i>
+                            <span>推荐："义兴张"等老字号</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 三不沾 -->
+                <div class="bg-light rounded-xl overflow-hidden shadow-lg transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://picsum.photos/id/1084/600/400" alt="三不沾" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">三不沾</h3>
+                        <p class="text-gray-600 mb-4">
+                            口感Q弹香甜，具有不沾盘、不沾筷、不沾牙的特点。
+                        </p>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <i class="fa fa-map-marker text-accent mr-2"></i>
+                            <span>推荐：盛德利等当地餐馆</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 粉浆饭 -->
+                <div class="bg-light rounded-xl overflow-hidden shadow-lg transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://picsum.photos/id/1079/600/400" alt="粉浆饭" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">粉浆饭</h3>
+                        <p class="text-gray-600 mb-4">
+                            酸香开胃，搭配水煎包别有一番风味，是安阳传统美食。
+                        </p>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <i class="fa fa-map-marker text-accent mr-2"></i>
+                            <span>推荐：鼓楼区县前街老铺</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 住宿建议 -->
+    <section id="accommodation" class="py-20 bg-light">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.8rem,4vw,2.5rem)] font-serif font-bold text-primary mb-4">住宿建议</h2>
+                <div class="w-24 h-1 bg-accent mx-auto mb-6"></div>
+                <p class="max-w-3xl mx-auto text-lg">精选舒适住宿选择，让您的安阳之旅更加惬意</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- 安阳迎宾馆 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg">
+                    <div class="h-56 overflow-hidden">
+                        <img src="https://picsum.photos/id/1040/800/600" alt="安阳迎宾馆" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-bold">安阳迎宾馆</h3>
+                            <div class="flex items-center">
+                                <i class="fa fa-star text-yellow-400"></i>
+                                <i class="fa fa-star text-yellow-400"></i>
+                                <i class="fa fa-star text-yellow-400"></i>
+                                <i class="fa fa-star text-yellow-400"></i>
+                                <i class="fa fa-star-half-o text-yellow-400"></i>
+                                <span class="ml-1 text-sm">4.7</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center text-gray-600 mb-4 text-sm">
+                            <i class="fa fa-map-marker text-accent mr-2"></i>
+                            <span>文峰大道东段609号</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            环境优美，有静谧花园和超大停车场，适合追求高品质住宿体验的游客。
+                        </p>
+                        <button class="w-full py-2 border border-primary text-primary hover:bg-primary hover:text-white rounded-lg transition-colors mt-4">
+                            查看详情
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 安阳字都酒店 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg">
+                    <div class="h-56 overflow-hidden">
+                        <img src="https://picsum.photos/id/1057/800/600" alt="安阳字都酒店" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-bold">安阳字都酒店</h3>
+                            <div class="flex items-center">
+                                <i class="fa fa-star text-yellow-400"></i>
+                                <i class="fa fa-star text-yellow-400"></i>
+                                <i class="fa fa-star text-yellow-400"></i>
+                                <i class="fa fa-star text-yellow-400"></i>
+                                <i class="fa fa-star text-yellow-400"></i>
+                                <span class="ml-1 text-sm">4.8</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center text-gray-600 mb-4 text-sm">
+                            <i class="fa fa-map-marker text-accent mr-2"></i>
+                            <span>永明路与文博街交叉口西南角</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            隐藏在中国文字博物馆里，文化氛围浓厚，设计独特。
+                        </p>
+                        <button class="w-full py-2 border border-primary text-primary hover:bg-primary hover:text-white rounded-lg transition-colors mt-4">
+                            查看详情
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 禧福缘商务酒店 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg">
+                    <div class="h-56 overflow-hidden">
+                        <img src="https://picsum.photos/id/1048/800/600" alt="禧福缘商务酒店" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-bold">禧福缘商务酒店</h3>
+                            <div class="flex items-center">
+                                <i class="fa fa-star text-yellow-400"></i>
+                                <i class="fa fa-star text-yellow-400"></i>
+                                <i class="fa fa-star text-yellow-400"></i>
+                                <i class="fa fa-star text-yellow-400"></i>
+                                <i class="fa fa-star-o text-yellow-400"></i>
+                                <span class="ml-1 text-sm">4.6</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center text-gray-600 mb-4 text-sm">
+                            <i class="fa fa-map-marker text-accent mr-2"></i>
+                            <span>林州市红旗渠大道西段88号</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            设施设备新，隔音效果好，前往红旗渠等景区较为方便。
+                        </p>
+                        <button class="w-full py-2 border border-primary text-primary hover:bg-primary hover:text-white rounded-lg transition-colors mt-4">
+                            查看详情
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 注意事项 -->
+    <section id="tips" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.8rem,4vw,2.5rem)] font-serif font-bold text-primary mb-4">注意事项</h2>
+                <div class="w-24 h-1 bg-accent mx-auto mb-6"></div>
+                <p class="max-w-3xl mx-auto text-lg">旅行前的实用提示，让您的安阳之行更加顺利</p>
+            </div>
+
+            <div class="max-w-3xl mx-auto bg-light rounded-2xl p-8 shadow-lg">
+                <ul class="space-y-6">
+                    <li class="flex gap-4">
+                        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                            <i class="fa fa-calendar-check-o"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg mb-1">闭馆信息</h3>
+                            <p class="text-gray-600">殷墟、中国文字博物馆等景点周一闭馆，需合理安排行程，避免周一前往。</p>
+                        </div>
+                    </li>
+                    <li class="flex gap-4">
+                        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                            <i class="fa fa-sun-o"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg mb-1">防暑防晒</h3>
+                            <p class="text-gray-600">8月安阳天气较为炎热，需注意做好防晒措施，携带防晒用品和充足的饮用水。</p>
+                        </div>
+                    </li>
+                    <li class="flex gap-4">
+                        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                            <i class="fa fa-umbrella"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg mb-1">山区准备</h3>
+                            <p class="text-gray-600">太行大峡谷内温差较大，且部分路段较为险峻，建议携带一件外套和防滑鞋。</p>
+                        </div>
+                    </li>
+                    <li class="flex gap-4">
+                        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                            <i class="fa fa-car"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg mb-1">交通建议</h3>
+                            <p class="text-gray-600">前往林州太行大峡谷建议包车或自驾，公共交通班次较少且耗时较长。</p>
+                        </div>
+                    </li>
+                    <li class="flex gap-4">
+                        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                            <i class="fa fa-ticket"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg mb-1">门票预约</h3>
+                            <p class="text-gray-600">部分热门景点建议提前在线预约，尤其是节假日期间，可节省排队时间。</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 底部CTA -->
+    <section class="py-16 bg-primary text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-2xl md:text-3xl font-serif font-bold mb-6">准备好开启您的安阳之旅了吗？</h2>
+            <p class="max-w-2xl mx-auto mb-8 text-white/80">
+                探索千年古都的历史魅力，领略太行山脉的壮丽风光，安阳期待您的到来。
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#itinerary" class="bg-white text-primary hover:bg-light font-medium py-3 px-8 rounded-full transition-all transform hover:scale-105">
+                    查看详细行程
+                </a>
+                <a href="#" class="bg-transparent border-2 border-white text-white hover:bg-white/10 font-medium py-3 px-8 rounded-full transition-all">
+                    分享攻略 <i class="fa fa-share-alt ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-6">
+                        <i class="fa fa-map-marker text-accent text-2xl"></i>
+                        <h3 class="text-xl font-serif font-bold">安阳旅游攻略</h3>
+                    </div>
+                    <p class="text-gray-400 mb-6">
+                        探索殷商文化发源地，领略太行山脉壮美风光。
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-accent transition-colors">
+                            <i class="fa fa-weibo text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-accent transition-colors">
+                            <i class="fa fa-wechat text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-accent transition-colors">
+                            <i class="fa fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-accent transition-colors">
+                            <i class="fa fa-twitter text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6">快速导航</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#overview" class="text-gray-400 hover:text-white transition-colors">概览</a></li>
+                        <li><a href="#itinerary" class="text-gray-400 hover:text-white transition-colors">行程安排</a></li>
+                        <li><a href="#food" class="text-gray-400 hover:text-white transition-colors">美食推荐</a></li>
+                        <li><a href="#accommodation" class="text-gray-400 hover:text-white transition-colors">住宿建议</a></li>
+                        <li><a href="#tips" class="text-gray-400 hover:text-white transition-colors">注意事项</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6">热门景点</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">殷墟遗址</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">中国文字博物馆</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">太行大峡谷</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">红旗渠</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">羑里城</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6">联系我们</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fa fa-envelope text-accent mt-1 mr-3"></i>
+                            <span class="text-gray-400">info@anyang-tourism.com</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-phone text-accent mt-1 mr-3"></i>
+                            <span class="text-gray-400">+86 372-123456</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-map-marker text-accent mt-1 mr-3"></i>
+                            <span class="text-gray-400">安阳市文峰区旅游局</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500">
+                <p>&copy; 2023 安阳旅游攻略 | 版权所有</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 返回顶部按钮 -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-accent text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg transform transition-all duration-300 opacity-0 translate-y-10">
+        <i class="fa fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // 导航栏滚动效果
+        const navbar = document.getElementById('navbar');
+        const backToTop = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 100) {
+                navbar.classList.add('bg-dark/90', 'bg-blur', 'shadow-md');
+                navbar.classList.remove('bg-transparent');
+                
+                backToTop.classList.remove('opacity-0', 'translate-y-10');
+                backToTop.classList.add('opacity-100', 'translate-y-0');
+            } else {
+                navbar.classList.remove('bg-dark/90', 'bg-blur', 'shadow-md');
+                navbar.classList.add('bg-transparent');
+                
+                backToTop.classList.add('opacity-0', 'translate-y-10');
+                backToTop.classList.remove('opacity-100', 'translate-y-0');
+            }
+        });
+        
+        // 移动端菜单切换
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuToggle.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+            if (mobileMenu.classList.contains('hidden')) {
+                menuToggle.innerHTML = '<i class="fa fa-bars"></i>';
+            } else {
+                menuToggle.innerHTML = '<i class="fa fa-times"></i>';
+            }
+        });
+        
+        // 行程标签页切换
+        const itineraryTabs = document.querySelectorAll('.itinerary-tab');
+        const itineraryContents = document.querySelectorAll('.itinerary-content');
+        
+        itineraryTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // 移除所有标签和内容的active类
+                itineraryTabs.forEach(t => {
+                    t.classList.remove('active', 'bg-primary', 'text-white');
+                    t.classList.add('bg-gray-200', 'hover:bg-gray-300');
+                });
+                
+                itineraryContents.forEach(content => {
+                    content.classList.add('hidden');
+                    content.classList.remove('active');
+                });
+                
+                // 为当前点击的标签添加active类
+                tab.classList.add('active', 'bg-primary', 'text-white');
+                tab.classList.remove('bg-gray-200', 'hover:bg-gray-300');
+                
+                // 显示对应的内容
+                const targetDay = tab.getAttribute('data-day');
+                document.getElementById(targetDay).classList.remove('hidden');
+                document.getElementById(targetDay).classList.add('active');
+            });
+        });
+        
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                // 关闭移动菜单（如果打开）
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                    menuToggle.innerHTML = '<i class="fa fa-bars"></i>';
+                }
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // 返回顶部按钮
+        backToTop.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // 添加页面载入动画
+        document.addEventListener('DOMContentLoaded', function() {
+            document.body.classList.add('loaded');
+        });
+    </script>
+</body>
+</html>
