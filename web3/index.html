@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web3 Portal | Decentralized Future</title>
+    <!-- External Resources -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.8/dist/chart.umd.min.js"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6C5CE7',    // Main purple - represents innovation
+                        secondary: '#00F5D4',  // Cyan accent - represents technology
+                        dark: '#121212',       // Dark background
+                        'dark-light': '#1E1E1E', // Lighter dark for cards
+                        'gray-custom': '#2D2D2D', // Custom gray for UI elements
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['"Space Grotesk"', 'sans-serif']
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom Utilities -->
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .text-glow {
+                text-shadow: 0 0 10px rgba(108, 92, 231, 0.7);
+            }
+            .bg-gradient-web3 {
+                background: linear-gradient(135deg, #121212 0%, #1E1E1E 100%);
+            }
+            .card-hover {
+                @apply transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 hover:-translate-y-1;
+            }
+            .glass-effect {
+                @apply bg-white/5 backdrop-blur-md border border-white/10;
+            }
+        }
+    </style>
+    
+    <style>
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #1E1E1E;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #6C5CE7;
+            border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: #5a49d1;
+        }
+        
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Animated background elements */
+        .bg-element {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(100px);
+            opacity: 0.2;
+            z-index: 0;
+        }
+        
+        /* Loading spinner */
+        .spinner {
+            border-top-color: #6C5CE7;
+            animation: spinner 0.8s linear infinite;
+        }
+        
+        @keyframes spinner {
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+
+<body class="bg-dark text-white font-sans overflow-x-hidden">
+    <!-- Animated background elements -->
+    <div class="bg-element bg-primary w-[600px] h-[600px] top-[-300px] left-[-100px]"></div>
+    <div class="bg-element bg-secondary w-[500px] h-[500px] bottom-[-250px] right-[-150px]"></div>
+
+    <!-- Navigation -->
+    <header id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4">
+        <div class="container mx-auto px-4 md:px-6">
+            <nav class="flex items-center justify-between glass-effect rounded-full px-6 py-3">
+                <!-- Logo -->
+                <a href="#" class="flex items-center space-x-2">
+                    <div class="w-10 h-10 rounded-lg bg-primary flex items-center justify-center">
+                        <i class="fa fa-link text-white text-xl"></i>
+                    </div>
+                    <span class="font-display font-bold text-xl tracking-tight">
+                        <span class="text-white">Web</span><span class="text-secondary">3</span>
+                    </span>
+                </a>
+                
+                <!-- Desktop Navigation -->
+                <ul class="hidden md:flex items-center space-x-8">
+                    <li><a href="#home" class="font-medium hover:text-secondary transition-colors">Home</a></li>
+                    <li><a href="#features" class="font-medium hover:text-secondary transition-colors">Features</a></li>
+                    <li><a href="#dapps" class="font-medium hover:text-secondary transition-colors">DApps</a></li>
+                    <li><a href="#marketplace" class="font-medium hover:text-secondary transition-colors">Marketplace</a></li>
+                    <li><a href="#news" class="font-medium hover:text-secondary transition-colors">News</a></li>
+                </ul>
+                
+                <!-- Connect Wallet Button -->
+                <button id="connect-wallet" class="hidden md:flex items-center space-x-2 bg-primary hover:bg-primary/90 text-white font-medium px-5 py-2.5 rounded-lg transition-all">
+                    <i class="fa fa-wallet"></i>
+                    <span>Connect Wallet</span>
+                </button>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-white">
+                    <i class="fa fa-bars text-2xl"></i>
+                </button>
+            </nav>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="md:hidden hidden mt-4 glass-effect rounded-xl p-5 z-50">
+                <ul class="space-y-4">
+                    <li><a href="#home" class="block font-medium hover:text-secondary transition-colors">Home</a></li>
+                    <li><a href="#features" class="block font-medium hover:text-secondary transition-colors">Features</a></li>
+                    <li><a href="#dapps" class="block font-medium hover:text-secondary transition-colors">DApps</a></li>
+                    <li><a href="#marketplace" class="block font-medium hover:text-secondary transition-colors">Marketplace</a></li>
+                    <li><a href="#news" class="block font-medium hover:text-secondary transition-colors">News</a></li>
+                    <li>
+                        <button class="w-full flex items-center justify-center space-x-2 bg-primary hover:bg-primary/90 text-white font-medium px-5 py-2.5 rounded-lg transition-all">
+                            <i class="fa fa-wallet"></i>
+                            <span>Connect Wallet</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="min-h-screen pt-32 pb-20 relative">
+            <div class="container mx-auto px-4 md:px-6 relative z-10">
+                <div class="flex flex-col lg:flex-row items-center">
+                    <div class="lg:w-1/2 mb-12 lg:mb-0">
+                        <h1 class="text-[clamp(2.5rem,6vw,4.5rem)] font-display font-bold leading-tight mb-6">
+                            Enter the <span class="text-primary text-glow">Decentralized</span> Future
+                        </h1>
+                        <p class="text-gray-300 text-[clamp(1rem,2vw,1.25rem)] mb-8 max-w-xl">
+                            Discover the world of Web3 with seamless access to decentralized applications, digital assets, and blockchain technology.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <button class="bg-primary hover:bg-primary/90 text-white font-medium px-8 py-3.5 rounded-lg transition-all flex items-center justify-center space-x-2">
+                                <span>Get Started</span>
+                                <i class="fa fa-arrow-right"></i>
+                            </button>
+                            <button class="glass-effect hover:bg-white/10 text-white font-medium px-8 py-3.5 rounded-lg transition-all flex items-center justify-center space-x-2">
+                                <i class="fa fa-play-circle"></i>
+                                <span>How It Works</span>
+                            </button>
+                        </div>
+                        
+                        <!-- Stats -->
+                        <div class="grid grid-cols-3 gap-6 mt-12">
+                            <div>
+                                <p class="text-3xl font-bold text-white mb-1">10K+</p>
+                                <p class="text-gray-400 text-sm">Active Users</p>
+                            </div>
+                            <div>
+                                <p class="text-3xl font-bold text-white mb-1">250+</p>
+                                <p class="text-gray-400 text-sm">DApps</p>
+                            </div>
+                            <div>
+                                <p class="text-3xl font-bold text-white mb-1">50+</p>
+                                <p class="text-gray-400 text-sm">Blockchains</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="lg:w-1/2 relative">
+                        <div class="relative animate-float">
+                            <img src="https://picsum.photos/id/1/600/500" alt="Web3 Ecosystem Visualization" class="rounded-2xl shadow-2xl shadow-primary/20">
+                            <!-- Floating elements -->
+                            <div class="absolute -top-5 -left-5 glass-effect p-3 rounded-xl animate-pulse-slow">
+                                <div class="flex items-center space-x-2">
+                                    <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                                    <span class="text-sm font-medium">Ethereum</span>
+                                </div>
+                            </div>
+                            <div class="absolute -bottom-3 -right-3 glass-effect p-3 rounded-xl animate-pulse-slow" style="animation-delay: 1s">
+                                <div class="flex items-center space-x-2">
+                                    <div class="w-3 h-3 rounded-full bg-blue-500"></div>
+                                    <span class="text-sm font-medium">Solana</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Featured Blockchains -->
+        <section class="py-16 relative">
+            <div class="container mx-auto px-4 md:px-6 relative z-10">
+                <p class="text-center text-gray-400 mb-8">TRUSTED BY LEADING BLOCKCHAINS</p>
+                <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16">
+                    <div class="grayscale hover:grayscale-0 transition-all opacity-70 hover:opacity-100">
+                        <span class="font-display font-bold text-xl">Ethereum</span>
+                    </div>
+                    <div class="grayscale hover:grayscale-0 transition-all opacity-70 hover:opacity-100">
+                        <span class="font-display font-bold text-xl">Solana</span>
+                    </div>
+                    <div class="grayscale hover:grayscale-0 transition-all opacity-70 hover:opacity-100">
+                        <span class="font-display font-bold text-xl">Polygon</span>
+                    </div>
+                    <div class="grayscale hover:grayscale-0 transition-all opacity-70 hover:opacity-100">
+                        <span class="font-display font-bold text-xl">Avalanche</span>
+                    </div>
+                    <div class="grayscale hover:grayscale-0 transition-all opacity-70 hover:opacity-100">
+                        <span class="font-display font-bold text-xl">Cardano</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Features Section -->
+        <section id="features" class="py-20 relative">
+            <div class="container mx-auto px-4 md:px-6 relative z-10">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-[clamp(1.8rem,4vw,3rem)] font-display font-bold mb-6">
+                        Web3 Features
+                    </h2>
+                    <p class="text-gray-300 text-lg">
+                        Everything you need to navigate the decentralized web with ease and security
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Feature 1 -->
+                    <div class="glass-effect rounded-xl p-6 card-hover">
+                        <div class="w-14 h-14 rounded-lg bg-primary/20 flex items-center justify-center text-primary mb-6">
+                            <i class="fa fa-shield text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Secure Wallet Integration</h3>
+                        <p class="text-gray-400">
+                            Connect your digital wallet securely and manage your assets across multiple blockchains with industry-leading encryption.
+                        </p>
+                    </div>
+                    
+                    <!-- Feature 2 -->
+                    <div class="glass-effect rounded-xl p-6 card-hover">
+                        <div class="w-14 h-14 rounded-lg bg-secondary/20 flex items-center justify-center text-secondary mb-6">
+                            <i class="fa fa-exchange text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Seamless Transactions</h3>
+                        <p class="text-gray-400">
+                            Execute peer-to-peer transactions with low fees and fast confirmation times across supported blockchains.
+                        </p>
+                    </div>
+                    
+                    <!-- Feature 3 -->
+                    <div class="glass-effect rounded-xl p-6 card-hover">
+                        <div class="w-14 h-14 rounded-lg bg-primary/20 flex items-center justify-center text-primary mb-6">
+                            <i class="fa fa-th-large text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">DApp Marketplace</h3>
+                        <p class="text-gray-400">
+                            Discover and access decentralized applications across various categories from finance to gaming.
+                        </p>
+                    </div>
+                    
+                    <!-- Feature 4 -->
+                    <div class="glass-effect rounded-xl p-6 card-hover">
+                        <div class="w-14 h-14 rounded-lg bg-secondary/20 flex items-center justify-center text-secondary mb-6">
+                            <i class="fa fa-line-chart text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Real-time Analytics</h3>
+                        <p class="text-gray-400">
+                            Track market trends, token prices, and your portfolio performance with comprehensive data visualization.
+                        </p>
+                    </div>
+                    
+                    <!-- Feature 5 -->
+                    <div class="glass-effect rounded-xl p-6 card-hover">
+                        <div class="w-14 h-14 rounded-lg bg-primary/20 flex items-center justify-center text-primary mb-6">
+                            <i class="fa fa-lock text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Privacy Protection</h3>
+                        <p class="text-gray-400">
+                            Maintain full control over your personal data with privacy-focused tools and anonymous browsing options.
+                        </p>
+                    </div>
+                    
+                    <!-- Feature 6 -->
+                    <div class="glass-effect rounded-xl p-6 card-hover">
+                        <div class="w-14 h-14 rounded-lg bg-secondary/20 flex items-center justify-center text-secondary mb-6">
+                            <i class="fa fa-graduation-cap text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Learning Resources</h3>
+                        <p class="text-gray-400">
+                            Access educational content to expand your knowledge about blockchain technology and Web3 ecosystem.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Market Stats -->
+        <section class="py-20 relative">
+            <div class="container mx-auto px-4 md:px-6 relative z-10">
+                <div class="glass-effect rounded-2xl p-6 md:p-10">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-10">
+                        <div>
+                            <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-display font-bold mb-2">
+                                Market Overview
+                            </h2>
+                            <p class="text-gray-400">
+                                Real-time cryptocurrency market data and trends
+                            </p>
+                        </div>
+                        <div class="mt-4 md:mt-0">
+                            <select class="glass-effect text-white rounded-lg px-4 py-2">
+                                <option>Last 7 days</option>
+                                <option>Last 30 days</option>
+                                <option>Last 90 days</option>
+                                <option>All time</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <!-- Chart -->
+                    <div class="h-80 mb-8">
+                        <canvas id="marketChart"></canvas>
+                    </div>
+                    
+                    <!-- Top Cryptos -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <!-- Crypto 1 -->
+                        <div class="glass-effect rounded-xl p-5 flex items-center justify-between">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 rounded-full bg-gray-700 flex items-center justify-center">
+                                    <i class="fa fa-btc text-white text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold">Bitcoin</h3>
+                                    <p class="text-gray-400 text-sm">BTC</p>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <p class="font-bold text-xl">$42,568.21</p>
+                                <p class="text-green-500 text-sm flex items-center justify-end">
+                                    <i class="fa fa-arrow-up mr-1"></i> 2.4%
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- Crypto 2 -->
+                        <div class="glass-effect rounded-xl p-5 flex items-center justify-between">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 rounded-full bg-gray-700 flex items-center justify-center">
+                                    <i class="fa fa-ethereum text-white text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold">Ethereum</h3>
+                                    <p class="text-gray-400 text-sm">ETH</p>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <p class="font-bold text-xl">$2,845.76</p>
+                                <p class="text-green-500 text-sm flex items-center justify-end">
+                                    <i class="fa fa-arrow-up mr-1"></i> 1.8%
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- Crypto 3 -->
+                        <div class="glass-effect rounded-xl p-5 flex items-center justify-between">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 rounded-full bg-gray-700 flex items-center justify-center">
+                                    <i class="fa fa-sol text-white text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold">Solana</h3>
+                                    <p class="text-gray-400 text-sm">SOL</p>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <p class="font-bold text-xl">$112.34</p>
+                                <p class="text-red-500 text-sm flex items-center justify-end">
+                                    <i class="fa fa-arrow-down mr-1"></i> 0.7%
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- DApps Section -->
+        <section id="dapps" class="py-20 relative">
+            <div class="container mx-auto px-4 md:px-6 relative z-10">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-[clamp(1.8rem,4vw,3rem)] font-display font-bold mb-6">
+                        Featured DApps
+                    </h2>
+                    <p class="text-gray-300 text-lg">
+                        Explore decentralized applications that are revolutionizing various industries
+                    </p>
+                </div>
+                
+                <!-- DApp Categories -->
+                <div class="flex flex-wrap justify-center gap-4 mb-12">
+                    <button class="bg-primary text-white px-5 py-2 rounded-full text-sm font-medium">All</button>
+                    <button class="glass-effect hover:bg-white/10 px-5 py-2 rounded-full text-sm font-medium transition-colors">DeFi</button>
+                    <button class="glass-effect hover:bg-white/10 px-5 py-2 rounded-full text-sm font-medium transition-colors">NFTs</button>
+                    <button class="glass-effect hover:bg-white/10 px-5 py-2 rounded-full text-sm font-medium transition-colors">Gaming</button>
+                    <button class="glass-effect hover:bg-white/10 px-5 py-2 rounded-full text-sm font-medium transition-colors">Social</button>
+                    <button class="glass-effect hover:bg-white/10 px-5 py-2 rounded-full text-sm font-medium transition-colors">Tools</button>
+                </div>
+                
+                <!-- DApp Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- DApp 1 -->
+                    <div class="glass-effect rounded-xl overflow-hidden card-hover">
+                        <div class="h-48 overflow-hidden">
+                            <img src="https://picsum.photos/id/237/600/400" alt="DeFi Platform" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-4">
+                                <h3 class="text-xl font-bold">DeFi Hub</h3>
+                                <span class="bg-green-500/20 text-green-500 text-xs px-2 py-1 rounded-full">DeFi</span>
+                            </div>
+                            <p class="text-gray-400 text-sm mb-4">
+                                Comprehensive decentralized finance platform with staking, lending, and yield farming.
+                            </p>
+                            <div class="flex justify-between items-center">
+                                <div class="flex items-center space-x-1">
+                                    <i class="fa fa-chain text-primary"></i>
+                                    <span class="text-sm text-gray-400">Ethereum, Polygon</span>
+                                </div>
+                                <button class="text-primary hover:text-secondary transition-colors text-sm font-medium">
+                                    Launch App
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- DApp 2 -->
+                    <div class="glass-effect rounded-xl overflow-hidden card-hover">
+                        <div class="h-48 overflow-hidden">
+                            <img src="https://picsum.photos/id/239/600/400" alt="NFT Marketplace" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-4">
+                                <h3 class="text-xl font-bold">ArtBlock</h3>
+                                <span class="bg-purple-500/20 text-purple-500 text-xs px-2 py-1 rounded-full">NFTs</span>
+                            </div>
+                            <p class="text-gray-400 text-sm mb-4">
+                                Premium marketplace for digital art and collectibles with verified creators.
+                            </p>
+                            <div class="flex justify-between items-center">
+                                <div class="flex items-center space-x-1">
+                                    <i class="fa fa-chain text-primary"></i>
+                                    <span class="text-sm text-gray-400">Ethereum, Solana</span>
+                                </div>
+                                <button class="text-primary hover:text-secondary transition-colors text-sm font-medium">
+                                    Launch App
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- DApp 3 -->
+                    <div class="glass-effect rounded-xl overflow-hidden card-hover">
+                        <div class="h-48 overflow-hidden">
+                            <img src="https://picsum.photos/id/240/600/400" alt="Web3 Game" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-4">
+                                <h3 class="text-xl font-bold">MetaVerse</h3>
+                                <span class="bg-blue-500/20 text-blue-500 text-xs px-2 py-1 rounded-full">Gaming</span>
+                            </div>
+                            <p class="text-gray-400 text-sm mb-4">
+                                Play-to-earn gaming platform with virtual worlds and digital assets.
+                            </p>
+                            <div class="flex justify-between items-center">
+                                <div class="flex items-center space-x-1">
+                                    <i class="fa fa-chain text-primary"></i>
+                                    <span class="text-sm text-gray-400">Avalanche, BSC</span>
+                                </div>
+                                <button class="text-primary hover:text-secondary transition-colors text-sm font-medium">
+                                    Launch App
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-12">
+                    <button class="glass-effect hover:bg-white/10 text-white font-medium px-8 py-3 rounded-lg transition-all">
+                        View All DApps
+                    </button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Marketplace Section -->
+        <section id="marketplace" class="py-20 relative">
+            <div class="container mx-auto px-4 md:px-6 relative z-10">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-[clamp(1.8rem,4vw,3rem)] font-display font-bold mb-6">
+                        NFT Marketplace
+                    </h2>
+                    <p class="text-gray-300 text-lg">
+                        Discover unique digital assets and collectibles from top creators
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- NFT 1 -->
+                    <div class="glass-effect rounded-xl overflow-hidden card-hover">
+                        <div class="relative">
+                            <img src="https://picsum.photos/id/100/400/400" alt="Abstract NFT Art" class="w-full h-64 object-cover">
+                            <div class="absolute top-3 right-3 bg-primary text-white text-xs px-2 py-1 rounded">
+                                0.85 ETH
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-bold mb-2">Cosmic Dreams #428</h3>
+                            <div class="flex items-center mb-3">
+                                <img src="https://picsum.photos/id/64/100/100" alt="Creator avatar" class="w-6 h-6 rounded-full mr-2">
+                                <span class="text-sm text-gray-400">@cosmic_creator</span>
+                            </div>
+                            <button class="w-full bg-primary hover:bg-primary/90 text-white text-sm font-medium py-2 rounded-lg transition-colors">
+                                Place Bid
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- NFT 2 -->
+                    <div class="glass-effect rounded-xl overflow-hidden card-hover">
+                        <div class="relative">
+                            <img src="https://picsum.photos/id/101/400/400" alt="Digital Character NFT" class="w-full h-64 object-cover">
+                            <div class="absolute top-3 right-3 bg-primary text-white text-xs px-2 py-1 rounded">
+                                1.2 ETH
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-bold mb-2">Cyber Warrior #18</h3>
+                            <div class="flex items-center mb-3">
+                                <img src="https://picsum.photos/id/65/100/100" alt="Creator avatar" class="w-6 h-6 rounded-full mr-2">
+                                <span class="text-sm text-gray-400">@future_labs</span>
+                            </div>
+                            <button class="w-full bg-primary hover:bg-primary/90 text-white text-sm font-medium py-2 rounded-lg transition-colors">
+                                Place Bid
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- NFT 3 -->
+                    <div class="glass-effect rounded-xl overflow-hidden card-hover">
+                        <div class="relative">
+                            <img src="https://picsum.photos/id/102/400/400" alt="Virtual Landscape NFT" class="w-full h-64 object-cover">
+                            <div class="absolute top-3 right-3 bg-primary text-white text-xs px-2 py-1 rounded">
+                                0.55 ETH
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-bold mb-2">Digital Paradise</h3>
+                            <div class="flex items-center mb-3">
+                                <img src="https://picsum.photos/id/66/100/100" alt="Creator avatar" class="w-6 h-6 rounded-full mr-2">
+                                <span class="text-sm text-gray-400">@meta_artist</span>
+                            </div>
+                            <button class="w-full bg-primary hover:bg-primary/90 text-white text-sm font-medium py-2 rounded-lg transition-colors">
+                                Place Bid
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- NFT 4 -->
+                    <div class="glass-effect rounded-xl overflow-hidden card-hover">
+                        <div class="relative">
+                            <img src="https://picsum.photos/id/103/400/400" alt="Abstract NFT Art" class="w-full h-64 object-cover">
+                            <div class="absolute top-3 right-3 bg-primary text-white text-xs px-2 py-1 rounded">
+                                2.3 ETH
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-bold mb-2">Quantum Reality #76</h3>
+                            <div class="flex items-center mb-3">
+                                <img src="https://picsum.photos/id/67/100/100" alt="Creator avatar" class="w-6 h-6 rounded-full mr-2">
+                                <span class="text-sm text-gray-400">@quantum_art</span>
+                            </div>
+                            <button class="w-full bg-primary hover:bg-primary/90 text-white text-sm font-medium py-2 rounded-lg transition-colors">
+                                Place Bid
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-12">
+                    <button class="glass-effect hover:bg-white/10 text-white font-medium px-8 py-3 rounded-lg transition-all">
+                        Explore Marketplace
+                    </button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- News Section -->
+        <section id="news" class="py-20 relative">
+            <div class="container mx-auto px-4 md:px-6 relative z-10">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-[clamp(1.8rem,4vw,3rem)] font-display font-bold mb-6">
+                        Latest Web3 News
+                    </h2>
+                    <p class="text-gray-300 text-lg">
+                        Stay updated with the latest developments in blockchain and cryptocurrency
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- News 1 -->
+                    <div class="glass-effect rounded-xl overflow-hidden card-hover">
+                        <div class="h-48 overflow-hidden">
+                            <img src="https://picsum.photos/id/180/600/400" alt="Blockchain news" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center text-gray-400 text-sm mb-3">
+                                <span class="flex items-center mr-4">
+                                    <i class="fa fa-calendar-o mr-1"></i> June 15, 2023
+                                </span>
+                                <span class="flex items-center">
+                                    <i class="fa fa-user-o mr-1"></i> Web3 Reporter
+                                </span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3">Ethereum Completes Major Network Upgrade</h3>
+                            <p class="text-gray-400 text-sm mb-4">
+                                The latest Ethereum upgrade brings significant improvements to scalability and transaction fees...
+                            </p>
+                            <a href="#" class="text-primary hover:text-secondary transition-colors text-sm font-medium">
+                                Read More <i class="fa fa-arrow-right ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- News 2 -->
+                    <div class="glass-effect rounded-xl overflow-hidden card-hover">
+                        <div class="h-48 overflow-hidden">
+                            <img src="https://picsum.photos/id/181/600/400" alt="NFT news" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center text-gray-400 text-sm mb-3">
+                                <span class="flex items-center mr-4">
+                                    <i class="fa fa-calendar-o mr-1"></i> June 10, 2023
+                                </span>
+                                <span class="flex items-center">
+                                    <i class="fa fa-user-o mr-1"></i> NFT Insider
+                                </span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3">Major Artists Join NFT Platforms</h3>
+                            <p class="text-gray-400 text-sm mb-4">
+                                Several renowned traditional artists announce their entry into the NFT space with exclusive collections...
+                            </p>
+                            <a href="#" class="text-primary hover:text-secondary transition-colors text-sm font-medium">
+                                Read More <i class="fa fa-arrow-right ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- News 3 -->
+                    <div class="glass-effect rounded-xl overflow-hidden card-hover">
+                        <div class="h-48 overflow-hidden">
+                            <img src="https://picsum.photos/id/182/600/400" alt="Regulation news" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center text-gray-400 text-sm mb-3">
+                                <span class="flex items-center mr-4">
+                                    <i class="fa fa-calendar-o mr-1"></i> June 5, 2023
+                                </span>
+                                <span class="flex items-center">
+                                    <i class="fa fa-user-o mr-1"></i> Crypto Legal
+                                </span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3">New Regulatory Framework for Cryptocurrencies</h3>
+                            <p class="text-gray-400 text-sm mb-4">
+                                Governments introduce new guidelines for cryptocurrency exchanges and digital asset management...
+                            </p>
+                            <a href="#" class="text-primary hover:text-secondary transition-colors text-sm font-medium">
+                                Read More <i class="fa fa-arrow-right ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-12">
+                    <button class="glass-effect hover:bg-white/10 text-white font-medium px-8 py-3 rounded-lg transition-all">
+                        View All News
+                    </button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- CTA Section -->
+        <section class="py-20 relative">
+            <div class="container mx-auto px-4 md:px-6 relative z-10">
+                <div class="glass-effect rounded-3xl p-8 md:p-12 relative overflow-hidden">
+                    <!-- Background decoration -->
+                    <div class="absolute -right-20 -bottom-20 w-64 h-64 bg-primary rounded-full filter blur-3xl opacity-30"></div>
+                    
+                    <div class="flex flex-col lg:flex-row items-center justify-between relative z-10">
+                        <div class="mb-8 lg:mb-0 lg:max-w-xl">
+                            <h2 class="text-[clamp(1.8rem,4vw,3rem)] font-display font-bold mb-4">
+                                Start Your Web3 Journey Today
+                            </h2>
+                            <p class="text-gray-300 text-lg">
+                                Join thousands of users exploring the decentralized web with our intuitive platform.
+                            </p>
+                        </div>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <button class="bg-primary hover:bg-primary/90 text-white font-medium px-8 py-3.5 rounded-lg transition-all flex items-center justify-center space-x-2">
+                                <span>Create Account</span>
+                                <i class="fa fa-user-plus"></i>
+                            </button>
+                            <button id="connect-wallet-cta" class="glass-effect hover:bg-white/10 text-white font-medium px-8 py-3.5 rounded-lg transition-all flex items-center justify-center space-x-2">
+                                <i class="fa fa-wallet"></i>
+                                <span>Connect Wallet</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-dark-light py-16 relative">
+        <div class="container mx-auto px-4 md:px-6 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
+                <div class="lg:col-span-2">
+                    <a href="#" class="flex items-center space-x-2 mb-6">
+                        <div class="w-10 h-10 rounded-lg bg-primary flex items-center justify-center">
+                            <i class="fa fa-link text-white text-xl"></i>
+                        </div>
+                        <span class="font-display font-bold text-xl tracking-tight">
+                            <span class="text-white">Web</span><span class="text-secondary">3</span>
+                        </span>
+                    </a>
+                    <p class="text-gray-400 mb-6 max-w-md">
+                        Your gateway to the decentralized internet. Discover, connect, and interact with blockchain technology and digital assets.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full glass-effect flex items-center justify-center text-gray-400 hover:text-white transition-colors">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full glass-effect flex items-center justify-center text-gray-400 hover:text-white transition-colors">
+                            <i class="fa fa-discord"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full glass-effect flex items-center justify-center text-gray-400 hover:text-white transition-colors">
+                            <i class="fa fa-telegram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full glass-effect flex items-center justify-center text-gray-400 hover:text-white transition-colors">
+                            <i class="fa fa-medium"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="font-bold text-lg mb-6">Platform</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#features" class="text-gray-400 hover:text-white transition-colors">Features</a></li>
+                        <li><a href="#dapps" class="text-gray-400 hover:text-white transition-colors">DApps</a></li>
+                        <li><a href="#marketplace" class="text-gray-400 hover:text-white transition-colors">Marketplace</a></li>
+                        <li><a href="#news" class="text-gray-400 hover:text-white transition-colors">News</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Documentation</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="font-bold text-lg mb-6">Resources</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Help Center</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Community</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Developers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Partners</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="font-bold text-lg mb-6">Company</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Careers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Terms of Service</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-500 text-sm mb-4 md:mb-0">
+                    &copy; 2023 Web3 Portal. All rights reserved.
+                </p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-500 hover:text-gray-300 text-sm transition-colors">Privacy Policy</a>
+                    <a href="#" class="text-gray-500 hover:text-gray-300 text-sm transition-colors">Terms of Service</a>
+                    <a href="#" class="text-gray-500 hover:text-gray-300 text-sm transition-colors">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Wallet Connection Modal -->
+    <div id="wallet-modal" class="fixed inset-0 z-50 flex items-center justify-center hidden">
+        <div class="absolute inset-0 bg-black bg-opacity-70 backdrop-blur-sm" id="modal-backdrop"></div>
+        <div class="glass-effect rounded-2xl p-6 md:p-8 max-w-md w-full mx-4 relative z-10 transform transition-all">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="text-2xl font-bold">Connect Wallet</h3>
+                <button id="close-modal" class="text-gray-400 hover:text-white">
+                    <i class="fa fa-times text-xl"></i>
+                </button>
+            </div>
+            
+            <p class="text-gray-400 mb-6">
+                Choose your preferred wallet to connect to Web3 Portal
+            </p>
+            
+            <div class="space-y-4">
+                <button class="w-full glass-effect hover:bg-white/10 text-white font-medium px-5 py-3 rounded-lg transition-all flex items-center justify-between">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-400">
+                            <i class="fa fa-metamask"></i>
+                        </div>
+                        <span>MetaMask</span>
+                    </div>
+                    <i class="fa fa-arrow-right text-gray-400"></i>
+                </button>
+                
+                <button class="w-full glass-effect hover:bg-white/10 text-white font-medium px-5 py-3 rounded-lg transition-all flex items-center justify-between">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 rounded-full bg-purple-500/20 flex items-center justify-center text-purple-400">
+                            <i class="fa fa-wallet"></i>
+                        </div>
+                        <span>Coinbase Wallet</span>
+                    </div>
+                    <i class="fa fa-arrow-right text-gray-400"></i>
+                </button>
+                
+                <button class="w-full glass-effect hover:bg-white/10 text-white font-medium px-5 py-3 rounded-lg transition-all flex items-center justify-between">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 rounded-full bg-green-500/20 flex items-center justify-center text-green-400">
+                            <i class="fa fa-mobile"></i>
+                        </div>
+                        <span>WalletConnect</span>
+                    </div>
+                    <i class="fa fa-arrow-right text-gray-400"></i>
+                </button>
+                
+                <button class="w-full glass-effect hover:bg-white/10 text-white font-medium px-5 py-3 rounded-lg transition-all flex items-center justify-between">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 rounded-full bg-red-500/20 flex items-center justify-center text-red-400">
+                            <i class="fa fa-ethereum"></i>
+                        </div>
+                        <span>Ledger</span>
+                    </div>
+                    <i class="fa fa-arrow-right text-gray-400"></i>
+                </button>
+            </div>
+            
+            <p class="text-gray-500 text-xs text-center mt-6">
+                By connecting, you agree to our Terms of Service and Privacy Policy
+            </p>
+        </div>
+    </div>
+    
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('py-2');
+                navbar.classList.remove('py-4');
+            } else {
+                navbar.classList.add('py-4');
+                navbar.classList.remove('py-2');
+            }
+        });
+        
+        // Wallet modal
+        const connectWalletBtn = document.getElementById('connect-wallet');
+        const connectWalletCta = document.getElementById('connect-wallet-cta');
+        const walletModal = document.getElementById('wallet-modal');
+        const closeModalBtn = document.getElementById('close-modal');
+        const modalBackdrop = document.getElementById('modal-backdrop');
+        
+        function openModal() {
+            walletModal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeModal() {
+            walletModal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+        
+        connectWalletBtn?.addEventListener('click', openModal);
+        connectWalletCta?.addEventListener('click', openModal);
+        closeModalBtn?.addEventListener('click', closeModal);
+        modalBackdrop?.addEventListener('click', closeModal);
+        
+        // Market chart
+        const ctx = document.getElementById('marketChart');
+        
+        if (ctx) {
+            new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+                    datasets: [{
+                        label: 'Market Cap (Billions)',
+                        data: [1800, 1650, 1900, 2200, 2100, 2400, 2550],
+                        borderColor: '#6C5CE7',
+                        backgroundColor: 'rgba(108, 92, 231, 0.1)',
+                        tension: 0.4,
+                        fill: true
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    },
+                    scales: {
+                        x: {
+                            grid: {
+                                color: 'rgba(255, 255, 255, 0.05)'
+                            },
+                            ticks: {
+                                color: 'rgba(255, 255, 255, 0.7)'
+                            }
+                        },
+                        y: {
+                            grid: {
+                                color: 'rgba(255, 255, 255, 0.05)'
+                            },
+                            ticks: {
+                                color: 'rgba(255, 255, 255, 0.7)'
+                            }
+                        }
+                    }
+                }
+            });
+        }
+        
+        // Animate elements on scroll
+        const animateOnScroll = () => {
+            const elements = document.querySelectorAll('.card-hover');
+            
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.classList.add('animate-fade-in');
+                }
+            });
+        };
+        
+        window.addEventListener('scroll', animateOnScroll);
+        animateOnScroll(); // Check on initial load
+    </script>
+</body>
+</html>

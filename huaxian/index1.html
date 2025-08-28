@@ -1,0 +1,1267 @@
+<html lang="zh-CN"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>滑县2天1晚旅游攻略 | 探访古运河与民俗文化</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2C5F2D', // 滑县粮仓绿色调
+                        secondary: '#97BC62', // 辅助绿色
+                        accent: '#BC4B51', // 强调色
+                        light: '#F7F3E3', // 浅色背景
+                        dark: '#2D2926', // 深色文字
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans SC', 'sans-serif'],
+                        serif: ['Noto Serif SC', 'serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-shadow {
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            }
+            .text-shadow-sm {
+                text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+            }
+            .bg-blur {
+                backdrop-filter: blur(8px);
+            }
+            .modal-enter {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            .modal-enter-active {
+                opacity: 1;
+                transform: translateY(0);
+                transition: opacity 300ms, transform 300ms;
+            }
+            .modal-exit {
+                opacity: 1;
+            }
+            .modal-exit-active {
+                opacity: 0;
+                transform: translateY(-20px);
+                transition: opacity 300ms, transform 300ms;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&amp;family=Noto+Serif+SC:wght@400;600;700&amp;display=swap" rel="stylesheet">
+</head>
+<body class="bg-light text-dark font-sans">
+    <!-- 导航栏 -->
+    <header id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-transparent">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fa fa-map-marker text-accent text-2xl"></i>
+                <h1 class="text-xl md:text-2xl font-serif font-bold text-white text-shadow">滑县旅游攻略</h1>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#overview" class="text-white hover:text-accent transition-colors text-shadow-sm">概览</a>
+                <a href="#itinerary" class="text-white hover:text-accent transition-colors text-shadow-sm">行程安排</a>
+                <a href="#food" class="text-white hover:text-accent transition-colors text-shadow-sm">美食推荐</a>
+                <a href="#accommodation" class="text-white hover:text-accent transition-colors text-shadow-sm">住宿建议</a>
+                <a href="#tips" class="text-white hover:text-accent transition-colors text-shadow-sm">旅行贴士</a>
+                <a href="#attractions" class="text-white hover:text-accent transition-colors text-shadow-sm">热门景点</a>
+            </div>
+            <button id="menu-toggle" class="md:hidden text-white text-2xl">
+                <i class="fa fa-bars"></i>
+            </button>
+        </nav>
+        <!-- 移动端菜单 -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white/90 bg-blur absolute w-full">
+            <div class="container mx-auto px-4 py-2 flex flex-col space-y-3">
+                <a href="#overview" class="py-2 hover:text-accent transition-colors">概览</a>
+                <a href="#itinerary" class="py-2 hover:text-accent transition-colors">行程安排</a>
+                <a href="#food" class="py-2 hover:text-accent transition-colors">美食推荐</a>
+                <a href="#accommodation" class="py-2 hover:text-accent transition-colors">住宿建议</a>
+                <a href="#tips" class="py-2 hover:text-accent transition-colors">旅行贴士</a>
+                <a href="#attractions" class="py-2 hover:text-accent transition-colors">热门景点</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 英雄区域 -->
+    <section class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://picsum.photos/id/1062/1920/1080" alt="滑县风光" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-dark/50"></div>
+        </div>
+        <div class="container mx-auto px-4 z-10 text-center">
+            <h1 class="text-[clamp(2.5rem,6vw,4rem)] font-serif font-bold text-white mb-6 text-shadow">
+                滑县2天1晚旅游攻略
+            </h1>
+            <p class="text-[clamp(1rem,3vw,1.5rem)] text-white max-w-3xl mx-auto mb-10 text-shadow-sm">
+                探访运河古镇，品味豫北风情，体验民俗文化
+            </p>
+            <a href="#overview" class="inline-block bg-accent hover:bg-accent/90 text-white font-medium py-3 px-8 rounded-full transition-all transform hover:scale-105 shadow-lg">
+                开始探索 <i class="fa fa-arrow-down ml-2"></i>
+            </a>
+        </div>
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
+            <i class="fa fa-angle-double-down text-3xl"></i>
+        </div>
+    </section>
+
+    <!-- 概览部分 -->
+    <section id="overview" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.8rem,4vw,2.5rem)] font-serif font-bold text-primary mb-4">滑县旅游概览</h2>
+                <div class="w-24 h-1 bg-accent mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <p class="text-lg mb-6">
+                        滑县是河南省直管县，历史悠久，文化底蕴深厚，是中原地区著名的"粮仓"。这里有保存完好的明清古建筑群、古老的运河遗迹，以及丰富的民俗文化。
+                    </p>
+                    <p class="text-lg mb-6">
+                        滑县最著名的当属道口古镇，作为明清时期重要的运河码头，这里保留了大量的历史建筑和传统商铺，是了解豫北地区商贸文化的绝佳之地。
+                    </p>
+                    <div class="flex flex-wrap gap-4 mt-8">
+                        <div class="flex items-center bg-light p-3 rounded-lg">
+                            <i class="fa fa-calendar text-accent mr-3 text-xl"></i>
+                            <span>建议游玩：2天1晚</span>
+                        </div>
+                        <div class="flex items-center bg-light p-3 rounded-lg">
+                            <i class="fa fa-map-marker text-accent mr-3 text-xl"></i>
+                            <span>地点：河南省滑县</span>
+                        </div>
+                        <div class="flex items-center bg-light p-3 rounded-lg">
+                            <i class="fa fa-subway text-accent mr-3 text-xl"></i>
+                            <span>交通：建议自驾或班车</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative rounded-xl overflow-hidden shadow-xl transform transition-transform hover:scale-[1.02]">
+                    <img src="https://picsum.photos/id/1059/800/600" alt="滑县道口古镇风光" class="w-full h-auto">
+                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-dark/80 to-transparent p-6">
+                        <p class="text-white font-medium">道口古镇 - 明清运河商埠遗迹</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 行程安排 -->
+    <section id="itinerary" class="py-20 bg-light">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.8rem,4vw,2.5rem)] font-serif font-bold text-primary mb-4">行程安排</h2>
+                <div class="w-24 h-1 bg-accent mx-auto mb-6"></div>
+                <p class="max-w-3xl mx-auto text-lg">精心设计的2天1晚行程，带您深度体验滑县的历史文化与民俗风情</p>
+            </div>
+
+            <!-- 行程标签页 -->
+            <div class="mb-8">
+                <div class="flex flex-wrap justify-center gap-2 md:gap-4">
+                    <button class="itinerary-tab active px-6 py-3 bg-primary text-white rounded-full font-medium transition-all" data-day="day1">第一天</button>
+                    <button class="itinerary-tab px-6 py-3 bg-gray-200 hover:bg-gray-300 rounded-full font-medium transition-all" data-day="day2">第二天</button>
+                </div>
+            </div>
+
+            <!-- 第一天行程 -->
+            <div class="itinerary-content active" id="day1">
+                <div class="bg-white rounded-2xl shadow-lg p-6 md:p-10 mb-8">
+                    <h3 class="text-2xl md:text-3xl font-serif font-bold text-primary mb-6 flex items-center">
+                        <span class="bg-primary text-white rounded-full w-10 h-10 flex items-center justify-center mr-4">1</span>
+                        道口古镇文化探索之旅
+                    </h3>
+                    
+                    <div class="space-y-10">
+                        <!-- 上午 -->
+                        <div class="itinerary-item">
+                            <div class="flex flex-col md:flex-row gap-6">
+                                <div class="md:w-1/3">
+                                    <div class="rounded-xl overflow-hidden h-64 md:h-full shadow-md">
+                                        <img src="https://p3-search.byteimg.com/obj/labis/538a5904f0cd2140162c9566257c8318" alt="道口古镇" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                                    </div>
+                                </div>
+                                <div class="md:w-2/3">
+                                    <div class="flex items-center mb-4">
+                                        <span class="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm font-medium mr-3">上午</span>
+                                        <span class="text-gray-500"><i class="fa fa-clock-o mr-1"></i> 建议游玩：3小时</span>
+                                    </div>
+                                    <h4 class="text-xl font-bold mb-3">道口古镇核心区</h4>
+                                    <p class="mb-4">
+                                        漫步道口古镇，游览顺河南街、大集街等保存完好的明清商业街，欣赏"七台八庙九关厢"的古镇格局。重点参观保存完好的老店铺、票号、镖局等建筑，感受昔日运河商埠的繁荣景象。
+                                    </p>
+                                    <div class="flex flex-wrap gap-2 mt-2">
+                                        <span class="bg-light px-3 py-1 rounded-full text-sm">历史街区</span>
+                                        <span class="bg-light px-3 py-1 rounded-full text-sm">古建筑</span>
+                                        <span class="bg-light px-3 py-1 rounded-full text-sm">摄影</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- 下午 -->
+                        <div class="itinerary-item">
+                            <div class="flex flex-col md:flex-row gap-6">
+                                <div class="md:w-1/3">
+                                    <div class="rounded-xl overflow-hidden h-64 md:h-full shadow-md">
+                                        <img src="https://p3-search.byteimg.com/obj/labis/adaff25db1743c238d554302c56cf210" alt="滑县民俗博物馆" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                                    </div>
+                                </div>
+                                <div class="md:w-2/3">
+                                    <div class="flex items-center mb-4">
+                                        <span class="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm font-medium mr-3">下午</span>
+                                        <span class="text-gray-500"><i class="fa fa-clock-o mr-1"></i> 建议游玩：4小时</span>
+                                    </div>
+                                    <h4 class="text-xl font-bold mb-3">滑县民俗博物馆 + 火神庙</h4>
+                                    <p class="mb-4">
+                                        参观滑县民俗博物馆，了解滑县地区的民俗风情、传统手工艺和生活方式（约1.5小时）。之后前往火神庙，这座明清时期的建筑气势恢宏，木雕、砖雕工艺精湛，是了解当地宗教文化的重要窗口（约1小时）。
+                                    </p>
+                                    <p class="mb-4">
+                                        下午晚些时候，可到运河码头遗址，想象当年千帆竞发的繁忙景象，感受大运河文化的历史底蕴（约1小时）。
+                                    </p>
+                                    <div class="flex flex-wrap gap-2 mt-2">
+                                        <span class="bg-light px-3 py-1 rounded-full text-sm">博物馆</span>
+                                        <span class="bg-light px-3 py-1 rounded-full text-sm">历史建筑</span>
+                                        <span class="bg-light px-3 py-1 rounded-full text-sm">文化遗产</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- 晚上 -->
+                        <div class="itinerary-item">
+                            <div class="flex flex-col md:flex-row gap-6">
+                                <div class="md:w-1/3">
+                                    <div class="rounded-xl overflow-hidden h-64 md:h-full shadow-md">
+                                        <img src="https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/pc/code_assistant/e243cc6276dd4b1599db32f4e531fcd5~tplv-a9rns2rl98-image.image?rcl=20250812235111CB2054A3307E31B8FB5A&amp;rk3s=8e244e95&amp;rrcfp=2609e108&amp;x-expires=1755618675&amp;x-signature=P0JAiwnPhNEKXmYaVZpSN0r5VbI%3D" alt="道口古镇夜景" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                                    </div>
+                                </div>
+                                <div class="md:w-2/3">
+                                    <div class="flex items-center mb-4">
+                                        <span class="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm font-medium mr-3">晚上</span>
+                                    </div>
+                                    <h4 class="text-xl font-bold mb-3">古镇夜景 + 特色晚餐</h4>
+                                    <p class="mb-4">
+                                        傍晚时分，欣赏古镇的夜景，灯光映照下的古建筑别有一番韵味。晚餐品尝滑县特色美食，如道口烧鸡、牛屯火烧、老庙牛肉等，感受地道的豫北风味。
+                                    </p>
+                                    <p class="mb-4">
+                                        餐后可在古镇漫步，感受夜晚的宁静与祥和，或在茶馆小坐，体验当地慢生活。
+                                    </p>
+                                    <div class="flex flex-wrap gap-2 mt-2">
+                                        <span class="bg-light px-3 py-1 rounded-full text-sm">夜景</span>
+                                        <span class="bg-light px-3 py-1 rounded-full text-sm">美食</span>
+                                        <span class="bg-light px-3 py-1 rounded-full text-sm">休闲</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 第二天行程 -->
+            <div class="itinerary-content hidden" id="day2">
+                <div class="bg-white rounded-2xl shadow-lg p-6 md:p-10 mb-8">
+                    <h3 class="text-2xl md:text-3xl font-serif font-bold text-primary mb-6 flex items-center">
+                        <span class="bg-primary text-white rounded-full w-10 h-10 flex items-center justify-center mr-4">2</span>
+                        历史遗迹与乡村风光之旅
+                    </h3>
+                    
+                    <div class="space-y-10">
+                        <!-- 上午 -->
+                        <div class="itinerary-item">
+                            <div class="flex flex-col md:flex-row gap-6">
+                                <div class="md:w-1/3">
+                                    <div class="rounded-xl overflow-hidden h-64 md:h-full shadow-md">
+                                        <img src="https://p9-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/pc/code_assistant/cc482fa1209f4bc8af84a2bcfc5377df~tplv-a9rns2rl98-image.image?rcl=20250812235231203E4CAFE5DBB0DB7BA4&amp;rk3s=8e244e95&amp;rrcfp=2609e108&amp;x-expires=1755618755&amp;x-signature=oFRlY3MrxkHsJ4odkylKlBnAFjw%3D" alt="明福寺塔" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                                    </div>
+                                </div>
+                                <div class="md:w-2/3">
+                                    <div class="flex items-center mb-4">
+                                        <span class="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm font-medium mr-3">上午</span>
+                                        <span class="text-gray-500"><i class="fa fa-clock-o mr-1"></i> 建议游玩：3小时（车程约30分钟）</span>
+                                    </div>
+                                    <h4 class="text-xl font-bold mb-3">明福寺塔 + 千翠湖</h4>
+                                    <p class="mb-4">
+                                        上午前往明福寺塔，这座始建于唐代的古塔是滑县的标志性建筑之一，造型优美，保存完好，登上塔顶可俯瞰周边风光（约1.5小时）。
+                                    </p>
+                                    <p class="mb-4">
+                                        之后前往千翠湖湿地公园，这里水域广阔，植被丰富，是放松身心、亲近自然的好去处，可漫步湖边或乘船游览（约1.5小时）。
+                                    </p>
+                                    <div class="flex flex-wrap gap-2 mt-2">
+                                        <span class="bg-light px-3 py-1 rounded-full text-sm">历史遗迹</span>
+                                        <span class="bg-light px-3 py-1 rounded-full text-sm">自然风光</span>
+                                        <span class="bg-light px-3 py-1 rounded-full text-sm">摄影</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- 下午 -->
+                        <div class="itinerary-item">
+                            <div class="flex flex-col md:flex-row gap-6">
+                                <div class="md:w-1/3">
+                                    <div class="rounded-xl overflow-hidden h-64 md:h-full shadow-md">
+                                        <img src="https://p9-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/pc/code_assistant/5e937395f7e746bea87ecaef0b3a9730~tplv-a9rns2rl98-image.image?rcl=202508122354059286A753532B16BF7F57&amp;rk3s=8e244e95&amp;rrcfp=2609e108&amp;x-expires=1755618849&amp;x-signature=X8QOEF1hzUOy5%2FUvdo3XCIhMQes%3D" alt="瓦岗寨遗址" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                                    </div>
+                                </div>
+                                <div class="md:w-2/3">
+                                    <div class="flex items-center mb-4">
+                                        <span class="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm font-medium mr-3">下午</span>
+                                        <span class="text-gray-500"><i class="fa fa-clock-o mr-1"></i> 建议游玩：3小时（车程约40分钟）</span>
+                                    </div>
+                                    <h4 class="text-xl font-bold mb-3">瓦岗寨遗址 + 返程</h4>
+                                    <p class="mb-4">
+                                        前往瓦岗寨遗址，这里是隋末农民起义的重要根据地，参观瓦岗寨博物馆，了解那段波澜壮阔的历史，感受古代英雄豪杰的豪情壮志（约2小时）。
+                                    </p>
+                                    <p class="mb-4">
+                                        游览结束后，可在附近购买道口烧鸡等特色特产，随后结束愉快的滑县之旅，启程返程。
+                                    </p>
+                                    <div class="flex flex-wrap gap-2 mt-2">
+                                        <span class="bg-light px-3 py-1 rounded-full text-sm">历史遗迹</span>
+                                        <span class="bg-light px-3 py-1 rounded-full text-sm">文化体验</span>
+                                        <span class="bg-light px-3 py-1 rounded-full text-sm">购物</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 美食推荐 -->
+    <section id="food" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.8rem,4vw,2.5rem)] font-serif font-bold text-primary mb-4">美食推荐</h2>
+                <div class="w-24 h-1 bg-accent mx-auto mb-6"></div>
+                <p class="max-w-3xl mx-auto text-lg">品味滑县特色美食，感受地道的豫北风味</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- 道口烧鸡 -->
+                <div class="bg-light rounded-xl overflow-hidden shadow-lg transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://p3-search.byteimg.com/obj/labis/10c0033d8568048877a6aaa56d704bf8" alt="道口烧鸡" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">道口烧鸡</h3>
+                        <p class="text-gray-600 mb-4">
+                            滑县最著名的特产，距今已有300多年历史，以肉质鲜嫩、香味浓郁著称。
+                        </p>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <i class="fa fa-map-marker text-accent mr-2"></i>
+                            <span>推荐：义兴张世家等老字号</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 牛屯火烧 -->
+                <div class="bg-light rounded-xl overflow-hidden shadow-lg transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://p3-search.byteimg.com/obj/labis/7df557b935ccf09e0489bea7eb7b9de7" alt="牛屯火烧" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">牛屯火烧</h3>
+                        <p class="text-gray-600 mb-4">
+                            滑县牛屯镇特色小吃，外酥里嫩，可夹肉、夹菜，风味独特。
+                        </p>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <i class="fa fa-map-marker text-accent mr-2"></i>
+                            <span>推荐：牛屯镇老街老店</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 老庙牛肉 -->
+                <div class="bg-light rounded-xl overflow-hidden shadow-lg transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://p3-search.byteimg.com/obj/labis/526828604c5873601aa6c1ab18a3226d" alt="老庙牛肉" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">老庙牛肉</h3>
+                        <p class="text-gray-600 mb-4">
+                            滑县老庙镇特产，肉质鲜嫩，香味浓郁，是河南著名的清真食品。
+                        </p>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <i class="fa fa-map-marker text-accent mr-2"></i>
+                            <span>推荐：老庙镇传统作坊</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 滑县粉皮 -->
+                <div class="bg-light rounded-xl overflow-hidden shadow-lg transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://p3-search.byteimg.com/obj/labis/2ecafe630e9696f02f405b8e1d4caabe" alt="滑县粉皮" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">滑县粉皮</h3>
+                        <p class="text-gray-600 mb-4">
+                            以优质绿豆为原料制成，薄而透明，口感爽滑，是当地特色食材。
+                        </p>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <i class="fa fa-map-marker text-accent mr-2"></i>
+                            <span>推荐：当地农贸市场</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 住宿建议 -->
+    <section id="accommodation" class="py-20 bg-light">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.8rem,4vw,2.5rem)] font-serif font-bold text-primary mb-4">住宿建议</h2>
+                <div class="w-24 h-1 bg-accent mx-auto mb-6"></div>
+                <p class="max-w-3xl mx-auto text-lg">精选舒适住宿选择，让您的滑县之旅更加惬意</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- 道口古镇民宿 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg">
+                    <div class="h-56 overflow-hidden">
+                        <img src="https://p3-search.byteimg.com/obj/tos-cn-i-qvj2lq49k0/50b925d723264b0b9e5ae4ced9532317" alt="道口古镇民宿" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-bold">道口古镇民宿</h3>
+                            <div class="flex items-center">
+                                <i class="fa fa-star text-yellow-400"></i>
+                                <i class="fa fa-star text-yellow-400"></i>
+                                <i class="fa fa-star text-yellow-400"></i>
+                                <i class="fa fa-star text-yellow-400"></i>
+                                <i class="fa fa-star-o text-yellow-400"></i>
+                                <span class="ml-1 text-sm">4.2</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center text-gray-600 mb-4 text-sm">
+                            <i class="fa fa-map-marker text-accent mr-2"></i>
+                            <span>道口古镇景区内</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">由明清古建筑改造而成，保留了传统风貌，设施齐全，步行可达古镇各景点。</p>
+                        <button class="w-full py-2 border border-primary text-primary hover:bg-primary hover:text-white rounded-lg transition-colors mt-4">
+                            查看详情
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 滑县中州国际饭店 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg">
+                    <div class="h-56 overflow-hidden">
+                        <img src="https://p3-search.byteimg.com/obj/labis/a28d84d749b125c773dea7f553296745" alt="滑县中州国际饭店" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-bold">中州国际饭店</h3>
+                            <div class="flex items-center">
+                                <i class="fa fa-star text-yellow-400"></i>
+                                <i class="fa fa-star text-yellow-400"></i>
+                                <i class="fa fa-star text-yellow-400"></i>
+                                <i class="fa fa-star text-yellow-400"></i>
+                                <i class="fa fa-star-half-o text-yellow-400"></i>
+                                <span class="ml-1 text-sm">4.5</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center text-gray-600 mb-4 text-sm">
+                            <i class="fa fa-map-marker text-accent mr-2"></i>
+                            <span>滑县新区解放路</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            县城内高档酒店，设施完善，服务优质，距离道口古镇约10分钟车程。
+                        </p>
+                        <button class="w-full py-2 border border-primary text-primary hover:bg-primary hover:text-white rounded-lg transition-colors mt-4">
+                            查看详情
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 滑县迎宾馆 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg">
+                    <div class="h-56 overflow-hidden">
+                        <img src="https://p3-search.byteimg.com/obj/labis/dec561b9c79e0f1114c8f8dac31293d2" alt="滑县迎宾馆" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-bold">滑县迎宾馆</h3>
+                            <div class="flex items-center">
+                                <i class="fa fa-star text-yellow-400"></i>
+                                <i class="fa fa-star text-yellow-400"></i>
+                                <i class="fa fa-star text-yellow-400"></i>
+                                <i class="fa fa-star text-yellow-400"></i>
+                                <i class="fa fa-star-o text-yellow-400"></i>
+                                <span class="ml-1 text-sm">4.3</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center text-gray-600 mb-4 text-sm">
+                            <i class="fa fa-map-marker text-accent mr-2"></i>
+                            <span>滑县道口镇人民路</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            环境优美，交通便利，性价比高，提供多种房型选择，适合各类游客。
+                        </p>
+                        <button class="w-full py-2 border border-primary text-primary hover:bg-primary hover:text-white rounded-lg transition-colors mt-4">
+                            查看详情
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 热门景点 -->
+    <section id="attractions" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.8rem,4vw,2.5rem)] font-serif font-bold text-primary mb-4">热门景点</h2>
+                <div class="w-24 h-1 bg-accent mx-auto mb-6"></div>
+                <p class="max-w-3xl mx-auto text-lg">探索滑县最具代表性的景点，感受历史文化魅力</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- 道口古镇 -->
+                <div class="bg-light rounded-xl overflow-hidden shadow-lg transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl cursor-pointer attraction-card" data-attraction="daokou">
+                    <div class="h-56 overflow-hidden">
+                        <img src="https://p3-search.byteimg.com/obj/tos-cn-i-qvj2lq49k0/50b925d723264b0b9e5ae4ced9532317" alt="道口古镇" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">道口古镇</h3>
+                        <div class="flex items-center text-yellow-400 mb-3">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                            <span class="ml-2 text-gray-600">4.5分</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            明清时期重要的运河码头，保留了大量的历史建筑和传统商铺。
+                        </p>
+                        <div class="flex items-center text-accent font-medium">
+                            <span>查看详情</span>
+                            <i class="fa fa-arrow-right ml-2"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 明福寺塔 -->
+                <div class="bg-light rounded-xl overflow-hidden shadow-lg transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl cursor-pointer attraction-card" data-attraction="mingfu">
+                    <div class="h-56 overflow-hidden">
+                        <img src="https://p3-search.byteimg.com/obj/labis/93095422a77b68d8552cd5daea3b398b" alt="明福寺塔" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">明福寺塔</h3>
+                        <div class="flex items-center text-yellow-400 mb-3">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                            <span class="ml-2 text-gray-600">4.2分</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            始建于唐代的古塔，是滑县的标志性建筑之一，造型优美。
+                        </p>
+                        <div class="flex items-center text-accent font-medium">
+                            <span>查看详情</span>
+                            <i class="fa fa-arrow-right ml-2"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 瓦岗寨遗址 -->
+                <div class="bg-light rounded-xl overflow-hidden shadow-lg transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl cursor-pointer attraction-card" data-attraction="wagang">
+                    <div class="h-56 overflow-hidden">
+                        <img src="https://p3-search.byteimg.com/obj/tos-cn-i-qvj2lq49k0/2414a89ac4d04b2fa3deb8387a37f8b1" alt="瓦岗寨遗址" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">瓦岗寨遗址</h3>
+                        <div class="flex items-center text-yellow-400 mb-3">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                            <i class="fa fa-star-o"></i>
+                            <span class="ml-2 text-gray-600">3.7分</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            隋末农民起义的重要根据地，历史意义深远。
+                        </p>
+                        <div class="flex items-center text-accent font-medium">
+                            <span>查看详情</span>
+                            <i class="fa fa-arrow-right ml-2"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 千翠湖湿地公园 -->
+                <div class="bg-light rounded-xl overflow-hidden shadow-lg transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl cursor-pointer attraction-card" data-attraction="qiancui">
+                    <div class="h-56 overflow-hidden">
+                        <img src="https://p3-search.byteimg.com/obj/labis/50fcc8cf476c1d021c1345b9c6d4d266" alt="千翠湖湿地公园" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">千翠湖湿地公园</h3>
+                        <div class="flex items-center text-yellow-400 mb-3">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                            <span class="ml-2 text-gray-600">4.0分</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            水域广阔，植被丰富，是放松身心、亲近自然的好去处。
+                        </p>
+                        <div class="flex items-center text-accent font-medium">
+                            <span>查看详情</span>
+                            <i class="fa fa-arrow-right ml-2"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 滑县民俗博物馆 -->
+                <div class="bg-light rounded-xl overflow-hidden shadow-lg transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl cursor-pointer attraction-card" data-attraction="museum">
+                    <div class="h-56 overflow-hidden">
+                        <img src="https://p3-search.byteimg.com/obj/labis/d373155ff0dc965837ac87062ac625d7" alt="滑县民俗博物馆" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">滑县民俗博物馆</h3>
+                        <div class="flex items-center text-yellow-400 mb-3">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                            <i class="fa fa-star-o"></i>
+                            <span class="ml-2 text-gray-600">3.8分</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            展示滑县地区的民俗风情、传统手工艺和生活方式。
+                        </p>
+                        <div class="flex items-center text-accent font-medium">
+                            <span>查看详情</span>
+                            <i class="fa fa-arrow-right ml-2"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 火神庙 -->
+                <div class="bg-light rounded-xl overflow-hidden shadow-lg transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl cursor-pointer attraction-card" data-attraction="huoshen">
+                    <div class="h-56 overflow-hidden">
+                        <img src="https://p3-search.byteimg.com/obj/labis/6470edf5374110752fee1ba3470964af" alt="火神庙" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">火神庙</h3>
+                        <div class="flex items-center text-yellow-400 mb-3">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                            <span class="ml-2 text-gray-600">4.1分</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            明清时期的建筑，气势恢宏，木雕、砖雕工艺精湛。
+                        </p>
+                        <div class="flex items-center text-accent font-medium">
+                            <span>查看详情</span>
+                            <i class="fa fa-arrow-right ml-2"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 旅行贴士 -->
+    <section id="tips" class="py-20 bg-light">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.8rem,4vw,2.5rem)] font-serif font-bold text-primary mb-4">旅行贴士</h2>
+                <div class="w-24 h-1 bg-accent mx-auto mb-6"></div>
+                <p class="max-w-3xl mx-auto text-lg">实用旅行建议，让您的滑县之行更加顺利</p>
+            </div>
+
+            <div class="max-w-3xl mx-auto bg-white rounded-2xl p-8 shadow-lg">
+                <ul class="space-y-6">
+                    <li class="flex gap-4">
+                        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                            <i class="fa fa-car"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg mb-1">交通指南</h3>
+                            <p class="text-gray-600">滑县没有火车站，建议自驾或从安阳、濮阳等地乘坐班车前往。县内景点较为分散，自驾更为方便。</p>
+                        </div>
+                    </li>
+                    <li class="flex gap-4">
+                        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                            <i class="fa fa-shopping-bag"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg mb-1">购物推荐</h3>
+                            <p class="text-gray-600">道口烧鸡是滑县最著名的特产，建议选择老字号购买，真空包装便于携带。此外，滑县粉皮、老庙牛肉也是不错的选择。</p>
+                        </div>
+                    </li>
+                    <li class="flex gap-4">
+                        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                            <i class="fa fa-clock-o"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg mb-1">最佳时间</h3>
+                            <p class="text-gray-600">春秋两季（4-5月、9-10月）是游览滑县的最佳时节，气候宜人，适合户外活动。夏季较热，冬季较冷，需注意防暑或保暖。</p>
+                        </div>
+                    </li>
+                    <li class="flex gap-4">
+                        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                            <i class="fa fa-camera"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg mb-1">摄影提示</h3>
+                            <p class="text-gray-600">道口古镇的清晨和傍晚光线柔和，适合拍摄古建筑。明福寺塔、运河遗址等景点也是不错的摄影题材。</p>
+                        </div>
+                    </li>
+                    <li class="flex gap-4">
+                        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                            <i class="fa fa-language"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg mb-1">语言沟通</h3>
+                            <p class="text-gray-600">滑县方言属于中原官话，与普通话差异不大，沟通基本无障碍。但部分老年人可能方言较重，耐心倾听即可。</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 底部CTA -->
+    <section class="py-16 bg-primary text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-2xl md:text-3xl font-serif font-bold mb-6">准备好开启您的滑县之旅了吗？</h2>
+            <p class="max-w-2xl mx-auto mb-8 text-white/80">
+                探访运河古镇，品味豫北风情，体验滑县独特的历史文化魅力。
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#itinerary" class="bg-white text-primary hover:bg-light font-medium py-3 px-8 rounded-full transition-all transform hover:scale-105">
+                    查看详细行程
+                </a>
+                <a href="#" class="bg-transparent border-2 border-white text-white hover:bg-white/10 font-medium py-3 px-8 rounded-full transition-all">
+                    分享攻略 <i class="fa fa-share-alt ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-6">
+                        <i class="fa fa-map-marker text-accent text-2xl"></i>
+                        <h3 class="text-xl font-serif font-bold">滑县旅游攻略</h3>
+                    </div>
+                    <p class="text-gray-400 mb-6">
+                        探访运河古镇，品味豫北风情，体验民俗文化。
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-accent transition-colors">
+                            <i class="fa fa-weibo text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-accent transition-colors">
+                            <i class="fa fa-wechat text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-accent transition-colors">
+                            <i class="fa fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-accent transition-colors">
+                            <i class="fa fa-twitter text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6">快速导航</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#overview" class="text-gray-400 hover:text-white transition-colors">概览</a></li>
+                        <li><a href="#itinerary" class="text-gray-400 hover:text-white transition-colors">行程安排</a></li>
+                        <li><a href="#food" class="text-gray-400 hover:text-white transition-colors">美食推荐</a></li>
+                        <li><a href="#accommodation" class="text-gray-400 hover:text-white transition-colors">住宿建议</a></li>
+                        <li><a href="#tips" class="text-gray-400 hover:text-white transition-colors">旅行贴士</a></li>
+                        <li><a href="#attractions" class="text-gray-400 hover:text-white transition-colors">热门景点</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6">热门景点</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors attraction-link" data-attraction="daokou">道口古镇</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors attraction-link" data-attraction="mingfu">明福寺塔</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors attraction-link" data-attraction="wagang">瓦岗寨遗址</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors attraction-link" data-attraction="qiancui">千翠湖湿地公园</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors attraction-link" data-attraction="museum">滑县民俗博物馆</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors attraction-link" data-attraction="huoshen">火神庙</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6">联系我们</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fa fa-envelope text-accent mt-1 mr-3"></i>
+                            <span class="text-gray-400">info@huaxian-tourism.com</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-phone text-accent mt-1 mr-3"></i>
+                            <span class="text-gray-400">+86 372-7654321</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-map-marker text-accent mt-1 mr-3"></i>
+                            <span class="text-gray-400">滑县道口镇旅游服务中心</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500">
+                <p>© 2023 滑县旅游攻略 | 版权所有</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 返回顶部按钮 -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-accent text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg transform transition-all duration-300 opacity-0 translate-y-10">
+        <i class="fa fa-arrow-up"></i>
+    </button>
+
+    <!-- 景点详情模态框 -->
+    <div id="attraction-modal" class="fixed inset-0 z-50 flex items-center justify-center hidden">
+        <div class="absolute inset-0 bg-black/70 backdrop-blur-sm" id="modal-overlay"></div>
+        <div class="relative bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto mx-4 shadow-2xl transform transition-all duration-300 scale-95 opacity-0" id="modal-content">
+            <button id="close-modal" class="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/80 flex items-center justify-center shadow-md z-10 hover:bg-white transition-colors">
+                <i class="fa fa-times text-dark"></i>
+            </button>
+            
+            <div id="modal-body" class="p-0">
+                <!-- 模态框内容将通过JavaScript动态加载 -->
+            </div>
+        </div>
+    </div>
+
+    <!-- 景点详情内容模板 (不会直接显示，仅作为JavaScript模板) -->
+    <div id="attraction-templates" class="hidden">
+        <!-- 道口古镇 -->
+        <div id="template-daokou">
+            <div class="h-64 md:h-80 overflow-hidden">
+                <img src="https://picsum.photos/id/1041/1200/600" alt="道口古镇全景" class="w-full h-full object-cover">
+            </div>
+            <div class="p-6 md:p-8">
+                <h2 class="text-2xl md:text-3xl font-serif font-bold text-primary mb-4">道口古镇</h2>
+                <div class="flex items-center text-yellow-400 mb-6">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                    <span class="ml-2 text-gray-600">4.5分 (236条评价)</span>
+                </div>
+                
+                <div class="flex flex-wrap gap-4 mb-6">
+                    <div class="flex items-center">
+                        <i class="fa fa-map-marker text-accent mr-2"></i>
+                        <span>滑县道口镇</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fa fa-clock-o text-accent mr-2"></i>
+                        <span>全天开放</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fa fa-ticket text-accent mr-2"></i>
+                        <span>免费参观</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fa fa-walking text-accent mr-2"></i>
+                        <span>建议游玩：3-4小时</span>
+                    </div>
+                </div>
+                
+                <div class="prose max-w-none mb-8">
+                    <h3 class="text-xl font-bold mb-3">古镇简介</h3>
+                    <p class="mb-4">
+                        道口古镇位于滑县西北部，是明清时期重要的运河码头和商贸重镇。卫河穿镇而过，曾经千帆竞发，商贾云集，素有"小天津卫"之称。
+                    </p>
+                    <p class="mb-4">
+                        古镇保留了"七台八庙九关厢"的格局，现存明清时期的古建筑200余处，包括商号、票号、镖局、教堂等多种类型，是研究中原地区运河文化和商贸历史的重要实物资料。
+                    </p>
+                    
+                    <h3 class="text-xl font-bold mb-3">主要景点</h3>
+                    <ul class="list-disc pl-5 mb-4 space-y-2">
+                        <li><strong>顺河南街</strong>：古镇的核心商业街，保留了大量明清时期的商铺建筑，青砖灰瓦，飞檐翘角，古色古香。</li>
+                        <li><strong>大集街</strong>：以传统手工作坊和特色小吃闻名，可品尝到地道的滑县美食。</li>
+                        <li><strong>运河码头遗址</strong>：见证了道口古镇昔日的繁华，是了解运河文化的重要窗口。</li>
+                        <li><strong>大王庙</strong>：始建于明代，是当地百姓为祈求航运平安而建，建筑风格独特，木雕精美。</li>
+                    </ul>
+                    
+                    <h3 class="text-xl font-bold mb-3">历史沿革</h3>
+                    <p class="mb-4">
+                        道口古镇的历史可追溯至春秋时期，正式兴起于明代，鼎盛于清代。由于地处卫河沿岸，水陆交通便利，成为豫北地区重要的商品集散地。
+                    </p>
+                    <p class="mb-4">
+                        明清时期，道口古镇的商业十分发达，有"日进斗金"之说。当时镇上有各类商号、店铺数百家，经营粮食、布匹、绸缎、茶叶等商品，远销全国各地。
+                    </p>
+                    
+                    <h3 class="text-xl font-bold mb-3">游览贴士</h3>
+                    <p class="mb-4">
+                        1. 最佳游览时间为清晨和傍晚，可避开人流，感受古镇的宁静氛围。
+                    </p>
+                    <p class="mb-4">
+                        2. 古镇内有多家老字号烧鸡店，可现场品尝或购买真空包装的道口烧鸡作为特产。
+                    </p>
+                    <p class="mb-4">
+                        3. 周末和节假日可能会有民俗表演，如秧歌、舞龙等，可提前查询活动安排。
+                    </p>
+                    <p>
+                        4. 古镇内部分老建筑改为民宿，可选择在此住宿，体验古镇的夜晚风情。
+                    </p>
+                </div>
+                
+                <div class="bg-light rounded-xl p-6">
+                    <h3 class="text-xl font-bold mb-4">游客评价</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between items-start mb-2">
+                                <div class="flex items-center">
+                                    <img src="https://picsum.photos/id/1001/100/100" alt="游客头像" class="w-10 h-10 rounded-full mr-3">
+                                    <span class="font-medium">张先生</span>
+                                </div>
+                                <div class="text-yellow-400">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                            </div>
+                            <p class="text-gray-600">古镇保存得非常完好，很有历史韵味，特别是清晨时分，漫步在石板路上，仿佛穿越回了明清时期。道口烧鸡名不虚传，值得一试。</p>
+                        </div>
+                        <div>
+                            <div class="flex justify-between items-start mb-2">
+                                <div class="flex items-center">
+                                    <img src="https://picsum.photos/id/1002/100/100" alt="游客头像" class="w-10 h-10 rounded-full mr-3">
+                                    <span class="font-medium">李女士</span>
+                                </div>
+                                <div class="text-yellow-400">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star-o"></i>
+                                </div>
+                            </div>
+                            <p class="text-gray-600">很喜欢这里的古建筑，每一处都有故事。建议雇一位当地导游，可以了解更多关于古镇的历史和文化。小吃也很有特色，除了烧鸡，牛屯火烧也值得推荐。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 明福寺塔 -->
+        <div id="template-mingfu">
+            <div class="h-64 md:h-80 overflow-hidden">
+                <img src="https://picsum.photos/id/1043/1200/600" alt="明福寺塔" class="w-full h-full object-cover">
+            </div>
+            <div class="p-6 md:p-8">
+                <h2 class="text-2xl md:text-3xl font-serif font-bold text-primary mb-4">明福寺塔</h2>
+                <div class="flex items-center text-yellow-400 mb-6">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                    <span class="ml-2 text-gray-600">4.2分 (158条评价)</span>
+                </div>
+                
+                <div class="flex flex-wrap gap-4 mb-6">
+                    <div class="flex items-center">
+                        <i class="fa fa-map-marker text-accent mr-2"></i>
+                        <span>滑县城关镇</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fa fa-clock-o text-accent mr-2"></i>
+                        <span>8:00-17:30</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fa fa-ticket text-accent mr-2"></i>
+                        <span>20元/人</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fa fa-walking text-accent mr-2"></i>
+                        <span>建议游玩：1-2小时</span>
+                    </div>
+                </div>
+                
+                <div class="prose max-w-none mb-8">
+                    <h3 class="text-xl font-bold mb-3">塔体简介</h3>
+                    <p class="mb-4">
+                        明福寺塔始建于唐代宝历二年（公元826年），现存为宋代重建，是河南省重点文物保护单位。塔高43米，为十三级密檐式砖石结构，平面呈八角形，造型优美，气势雄伟。
+                    </p>
+                    <p class="mb-4">
+                        塔身由基座、塔身、塔刹三部分组成，每层均有券门、假窗和浮雕，内容丰富，工艺精湛，反映了宋代建筑艺术的高超水平。
+                    </p>
+                    
+                    <h3 class="text-xl font-bold mb-3">历史沿革</h3>
+                    <p class="mb-4">
+                        明福寺塔始建于唐代，原名"释迦文佛舍利塔"，后因寺得名"明福寺塔"。历史上曾多次修缮，现存塔体为宋代重建后的形制。
+                    </p>
+                    <p class="mb-4">
+                        明福寺原为滑县著名古刹，规模宏大，香火旺盛，可惜在近代逐渐荒废，仅存此塔。近年来，当地政府对塔体进行了全面修缮，并在周边修建了明福寺公园，成为市民和游客休闲观光的好去处。
+                    </p>
+                    
+                    <h3 class="text-xl font-bold mb-3">建筑特色</h3>
+                    <p class="mb-4">
+                        明福寺塔的建筑风格具有典型的宋代特点，同时保留了部分唐代建筑的遗风：
+                    </p>
+                    <ul class="list-disc pl-5 mb-4 space-y-2">
+                        <li>塔身为八角形，符合"天圆地方"的传统理念</li>
+                        <li>每层均有精美的砖雕，内容包括佛像、花卉、瑞兽等</li>
+                        <li>塔内有螺旋式楼梯，可登至塔顶，俯瞰滑县城区风光</li>
+                        <li>塔刹为铁制，由覆钵、相轮、宝盖等组成，造型精美</li>
+                    </ul>
+                    
+                    <h3 class="text-xl font-bold mb-3">游览贴士</h3>
+                    <p class="mb-4">
+                        1. 登塔需注意安全，楼梯较陡且狭窄，上下时请小心。
+                    </p>
+                    <p class="mb-4">
+                        2. 塔顶视野开阔，可俯瞰滑县城区全景，是摄影的好位置。
+                    </p>
+                    <p class="mb-4">
+                        3. 公园内环境优美，可在塔下休憩，感受古塔的历史沧桑。
+                    </p>
+                    <p>
+                        4. 周边有多家售卖滑县特产的店铺，可购买道口烧鸡、粉皮等特产。
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 其他景点模板省略，结构相同 -->
+        <div id="template-wagang">
+            <div class="h-64 md:h-80 overflow-hidden">
+                <img src="https://picsum.photos/id/1055/1200/600" alt="瓦岗寨遗址" class="w-full h-full object-cover">
+            </div>
+            <div class="p-6 md:p-8">
+                <h2 class="text-2xl md:text-3xl font-serif font-bold text-primary mb-4">瓦岗寨遗址</h2>
+                <!-- 内容省略 -->
+                <div class="prose max-w-none">
+                    <h3 class="text-xl font-bold mb-3">遗址简介</h3>
+                    <p class="mb-4">
+                        瓦岗寨遗址位于滑县南部，是隋末农民起义的重要根据地，在中国农民战争史上具有重要地位。
+                    </p>
+                    <p class="mb-4">
+                        公元611年，翟让在此领导农民起义，后来李密加入，队伍逐渐壮大，最多时达到数十万人，成为推翻隋朝统治的重要力量。瓦岗寨起义虽然最终失败，但对中国历史产生了深远影响。
+                    </p>
+                    <!-- 更多内容省略 -->
+                </div>
+            </div>
+        </div>
+        
+        <div id="template-qiancui">
+            <div class="h-64 md:h-80 overflow-hidden">
+                <img src="https://picsum.photos/id/1052/1200/600" alt="千翠湖湿地公园" class="w-full h-full object-cover">
+            </div>
+            <div class="p-6 md:p-8">
+                <h2 class="text-2xl md:text-3xl font-serif font-bold text-primary mb-4">千翠湖湿地公园</h2>
+                <!-- 内容省略 -->
+            </div>
+        </div>
+        
+        <div id="template-museum">
+            <div class="h-64 md:h-80 overflow-hidden">
+                <img src="https://picsum.photos/id/1073/1200/600" alt="滑县民俗博物馆" class="w-full h-full object-cover">
+            </div>
+            <div class="p-6 md:p-8">
+                <h2 class="text-2xl md:text-3xl font-serif font-bold text-primary mb-4">滑县民俗博物馆</h2>
+                <!-- 内容省略 -->
+            </div>
+        </div>
+        
+        <div id="template-huoshen">
+            <div class="h-64 md:h-80 overflow-hidden">
+                <img src="https://picsum.photos/id/1058/1200/600" alt="火神庙" class="w-full h-full object-cover">
+            </div>
+            <div class="p-6 md:p-8">
+                <h2 class="text-2xl md:text-3xl font-serif font-bold text-primary mb-4">火神庙</h2>
+                <!-- 内容省略 -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 导航栏滚动效果
+        const navbar = document.getElementById('navbar');
+        const backToTop = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 100) {
+                navbar.classList.add('bg-dark/90', 'bg-blur', 'shadow-md');
+                navbar.classList.remove('bg-transparent');
+                
+                backToTop.classList.remove('opacity-0', 'translate-y-10');
+                backToTop.classList.add('opacity-100', 'translate-y-0');
+            } else {
+                navbar.classList.remove('bg-dark/90', 'bg-blur', 'shadow-md');
+                navbar.classList.add('bg-transparent');
+                
+                backToTop.classList.add('opacity-0', 'translate-y-10');
+                backToTop.classList.remove('opacity-100', 'translate-y-0');
+            }
+        });
+        
+        // 移动端菜单切换
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuToggle.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+            if (mobileMenu.classList.contains('hidden')) {
+                menuToggle.innerHTML = '<i class="fa fa-bars"></i>';
+            } else {
+                menuToggle.innerHTML = '<i class="fa fa-times"></i>';
+            }
+        });
+        
+        // 行程标签页切换
+        const itineraryTabs = document.querySelectorAll('.itinerary-tab');
+        const itineraryContents = document.querySelectorAll('.itinerary-content');
+        
+        itineraryTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // 移除所有标签和内容的active类
+                itineraryTabs.forEach(t => {
+                    t.classList.remove('active', 'bg-primary', 'text-white');
+                    t.classList.add('bg-gray-200', 'hover:bg-gray-300');
+                });
+                
+                itineraryContents.forEach(content => {
+                    content.classList.add('hidden');
+                    content.classList.remove('active');
+                });
+                
+                // 为当前点击的标签添加active类
+                tab.classList.add('active', 'bg-primary', 'text-white');
+                tab.classList.remove('bg-gray-200', 'hover:bg-gray-300');
+                
+                // 显示对应的内容
+                const targetDay = tab.getAttribute('data-day');
+                document.getElementById(targetDay).classList.remove('hidden');
+                document.getElementById(targetDay).classList.add('active');
+            });
+        });
+        
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                // 关闭移动菜单（如果打开）
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                    menuToggle.innerHTML = '<i class="fa fa-bars"></i>';
+                }
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // 返回顶部按钮
+        backToTop.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // 景点详情模态框
+        const modal = document.getElementById('attraction-modal');
+        const modalContent = document.getElementById('modal-content');
+        const modalBody = document.getElementById('modal-body');
+        const closeModal = document.getElementById('close-modal');
+        const modalOverlay = document.getElementById('modal-overlay');
+        
+        // 打开模态框
+        function openModal(attraction) {
+            // 从模板加载内容
+            const template = document.getElementById(`template-${attraction}`);
+            if (template) {
+                modalBody.innerHTML = template.innerHTML;
+            }
+            
+            // 显示模态框并添加动画
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modalContent.classList.remove('scale-95', 'opacity-0');
+                modalContent.classList.add('scale-100', 'opacity-100');
+            }, 10);
+            
+            // 禁止背景滚动
+            document.body.style.overflow = 'hidden';
+        }
+        
+        // 关闭模态框
+        function closeModalFunc() {
+            modalContent.classList.remove('scale-100', 'opacity-100');
+            modalContent.classList.add('scale-95', 'opacity-0');
+            
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                document.body.style.overflow = '';
+            }, 300);
+        }
+        
+        // 点击关闭按钮关闭模态框
+        closeModal.addEventListener('click', closeModalFunc);
+        
+        // 点击遮罩层关闭模态框
+        modalOverlay.addEventListener('click', closeModalFunc);
+        
+        // 点击景点卡片打开模态框
+        document.querySelectorAll('.attraction-card').forEach(card => {
+            card.addEventListener('click', function() {
+                const attraction = this.getAttribute('data-attraction');
+                openModal(attraction);
+            });
+        });
+        
+        // 点击页脚景点链接打开模态框
+        document.querySelectorAll('.attraction-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const attraction = this.getAttribute('data-attraction');
+                openModal(attraction);
+            });
+        });
+        
+        // 按ESC键关闭模态框
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+                closeModalFunc();
+            }
+        });
+    </script>
+
+
+</body></html>
