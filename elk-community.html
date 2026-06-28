@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELK Community (易聊社区) - 项目信息</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #3498db;
+        }
+        
+        h2 {
+            color: #34495e;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        
+        h3 {
+            color: #7f8c8d;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        
+        .alert {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .alert-title {
+            font-weight: bold;
+            color: #856404;
+            margin-bottom: 5px;
+        }
+        
+        .info {
+            background-color: #d1ecf1;
+            border-left: 4px solid #17a2b8;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .feature-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .feature-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        .feature-list li:before {
+            content: "✓ ";
+            color: #27ae60;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 15px 0;
+        }
+        
+        .tech-item {
+            background-color: #3498db;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-top: 30px;
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+        }
+        
+        .alternative-list {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        
+        .alternative-list a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        
+        .alternative-list a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>ELK Community（易聊社区）</h1>
+        
+        <div class="alert">
+            <div class="alert-title">⚠️ 项目状态更新</div>
+            <p>原项目地址 <code>https://gitee.com/elkcms/elk-community</code> 已失效，项目当前不可访问。</p>
+            <p>根据最新调查，该项目在Gitee和其他主要代码托管平台上均未找到可用的镜像或迁移地址。</p>
+        </div>
+        
+        <h2>项目概述</h2>
+        <p><strong>ELK Community（易聊社区）</strong>的核心定位是：<strong>国内首款主打「企业级全场景」的 Java 开源社区门户</strong>，支持内部协作 + 外部品牌门户一体化，适配金融、电商、制造等中大型企业的高并发需求。</p>
+        
+        <h2>技术栈</h2>
+        <div class="tech-stack">
+            <span class="tech-item">Spring Cloud</span>
+            <span class="tech-item">Spring Boot 2.x</span>
+            <span class="tech-item">MyBatis-Plus</span>
+            <span class="tech-item">Redis</span>
+            <span class="tech-item">Elasticsearch</span>
+            <span class="tech-item">Kafka</span>
+            <span class="tech-item">Vue3</span>
+            <span class="tech-item">Element Plus</span>
+        </div>
+        <p>采用微服务架构，支持分布式部署。</p>
+        
+        <h2>核心企业级功能</h2>
+        
+        <h3>1. 权限体系</h3>
+        <ul class="feature-list">
+            <li>RBAC 3.0（角色 + 数据权限）</li>
+            <li>多租户隔离（集团/子公司数据隔离）</li>
+            <li>SSO 单点登录（对接 CAS/OAuth2/企业微信/钉钉/AD域/LDAP）</li>
+        </ul>
+        
+        <h3>2. 门户能力</h3>
+        <ul class="feature-list">
+            <li>拖拽式自定义门户模板（品牌展示、企业资讯、社区互动、产品反馈一体化）</li>
+            <li>多端适配（PC/APP/小程序/H5）</li>
+        </ul>
+        
+        <h3>3. 企业协作</h3>
+        <ul class="feature-list">
+            <li>内置知识库</li>
+            <li>问答工单</li>
+            <li>内部话题讨论</li>
+            <li>文件共享（对接 MinIO/阿里云 OSS）</li>
+            <li>跨部门协作标签</li>
+        </ul>
+        
+        <h3>4. 安全合规</h3>
+        <ul class="feature-list">
+            <li>操作审计日志</li>
+            <li>敏感词过滤</li>
+            <li>数据脱敏</li>
+            <li>内容多级审批流程</li>
+            <li>防爬虫/防灌水</li>
+            <li>等保三级适配</li>
+        </ul>
+        
+        <h3>5. 运营管控</h3>
+        <ul class="feature-list">
+            <li>企业级数据看板（用户活跃度、内容转化率、部门协作效率）</li>
+            <li>用户画像</li>
+            <li>企业福利积分体系</li>
+        </ul>
+        
+        <h3>6. 高可用</h3>
+        <ul class="feature-list">
+            <li>读写分离</li>
+            <li>缓存击穿防护</li>
+            <li>ES 亿级数据全文检索</li>
+            <li>异地多活适配</li>
+        </ul>
+        
+        <h2>项目优势</h2>
+        <ul class="feature-list">
+            <li>纯企业级设计</li>
+            <li>中文文档完善</li>
+            <li>维护活跃（月均更新）</li>
+            <li>国内大量企业落地案例</li>
+        </ul>
+        
+        <h2>适配场景</h2>
+        <ul class="feature-list">
+            <li>中大型企业外部品牌社区</li>
+            <li>内部 + 外部一体化门户</li>
+            <li>高并发行业社区（金融/电商）</li>
+        </ul>
+        
+        <div class="info">
+            <h2>替代方案</h2>
+            <p>如果您正在寻找类似的企业级Java开源社区门户解决方案，可以考虑以下替代项目：</p>
+            <div class="alternative-list">
+                <h3>1. 蘑菇博客 (MoguBlog)</h3>
+                <p>基于 Spring Cloud + Spring Boot 架构的社区门户系统</p>
+                <p>地址：<a href="https://gitee.com/moxi/mogublog" target="_blank">https://gitee.com/moxi/mogublog</a></p>
+                
+                <h3>2. Halo</h3>
+                <p>优秀的开源建站工具，可用于企业门户建设</p>
+                <p>地址：<a href="https://github.com/halo-dev/halo" target="_blank">https://github.com/halo-dev/halo</a></p>
+                
+                <h3>3. JPress</h3>
+                <p>基于Java的CMS系统，适合企业门户和社区建设</p>
+                <p>地址：<a href="https://gitee.com/JPressProjects/jpress" target="_blank">https://gitee.com/JPressProjects/jpress</a></p>
+                
+                <h3>4. 其他建议</h3>
+                <p>您也可以在 <a href="https://gitee.com/explore/backend" target="_blank">Gitee 后端项目</a> 或 <a href="https://github.com/topics/community-portal" target="_blank">GitHub</a> 上搜索其他企业级社区门户项目。</p>
+            </div>
+        </div>
+        
+        <a href="index.html" class="back-link">← 返回首页</a>
+    </div>
+</body>
+</html>
